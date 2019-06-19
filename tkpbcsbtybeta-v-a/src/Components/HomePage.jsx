@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
+import Schedule from './Schedule';
 
 const HomePage = () => {
     return (
@@ -8,6 +9,7 @@ const HomePage = () => {
             <div>
                 <NavBar />
             </div>
+            <Schedule/>
         </div>
     );
 }

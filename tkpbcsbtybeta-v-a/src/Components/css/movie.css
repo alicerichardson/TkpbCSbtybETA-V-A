@@ -1,0 +1,11 @@
+h1,
+h6 {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+h6 {
+    text-align: left;
+}
