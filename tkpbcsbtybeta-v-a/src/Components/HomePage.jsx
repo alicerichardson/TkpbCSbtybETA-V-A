@@ -2,6 +2,7 @@ import React, {style} from 'react';
 import NavBar from './NavBar';
 import Schedule from './Schedule';
 import Info from './Info';
+import SignUp from './SignUp';
 
 const HomePage = () => {
     return (
@@ -14,6 +15,9 @@ const HomePage = () => {
             </div>
             <div classname="schedule">
                 <Schedule />
+            </div>
+            <div classname="signup">
+                <SignUp />
             </div>
             <div className="footer">
                 <footer><Info /></footer>
