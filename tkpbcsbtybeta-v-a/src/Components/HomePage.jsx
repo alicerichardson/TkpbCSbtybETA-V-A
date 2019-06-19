@@ -13,7 +13,6 @@ const HomePage = () => {
             </div>
             <div>
                 <header><NavBar /></header>
-                <p></p>
             </div>
             <div classname="schedule">
                 <Schedule />
