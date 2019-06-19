@@ -3,12 +3,15 @@ import NavBar from './NavBar';
 import Schedule from './Schedule';
 import Info from './Info';
 import SignUp from './SignUp';
+import './css/homepage.css';
+import { Wave } from 'react-animated-text';
+
 
 const HomePage = () => {
     return (
         <div>
             <div className="title">
-                <h1>TkpbCSbtybETA@V+A</h1> 
+                <h1><Wave className="mainTitle" text='TkpbCSbtybETA@V+A' /></h1>
                 <h3>(TheaterKey powered by Clinical Solutions brought to you by Elsevier Tech Associates @ Via + Aries)</h3>
             </div>
             <div>
