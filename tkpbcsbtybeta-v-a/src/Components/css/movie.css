@@ -2,14 +2,11 @@
     border-style: solid;
     border-color: rgb(56, 18, 56);
     border-width: 2px;
-<<<<<<< HEAD
     border-radius: 10px;
     margin: 20px;
-=======
     padding: 15px;
     margin: 10px;
     background-color: white;
->>>>>>> b427b016a44050d1d2ed070f499c7c43a37f1acf
 }
 
 .col {
