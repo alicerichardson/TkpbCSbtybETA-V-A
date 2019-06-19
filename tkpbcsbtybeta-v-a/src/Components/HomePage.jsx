@@ -18,6 +18,7 @@ const HomePage = () => {
             <div className="footer">
                 <footer><Info /></footer>
             </div>
+            <Schedule/>
         </div>
     );
 }

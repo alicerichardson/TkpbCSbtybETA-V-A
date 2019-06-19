@@ -4,7 +4,8 @@ import Movie from './Movie';
 const Schedule = () => {
     return (
         <div>
-            <Movie />
+            <Movie/>
+            <Movie/>
         </div>
     );
 }
