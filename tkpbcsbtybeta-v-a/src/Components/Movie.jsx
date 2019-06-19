@@ -7,20 +7,18 @@ const Movie = () => {
         <div class="movie">
             <h1>Title</h1>
             <div class="row">
-                <div class="col">
+                <div class="col left">
                     <img src={movie}></img>
-                    <h6>Rating</h6>
-                    <h6>Runtime</h6>
+                    <h6>PG13</h6>
+                    <h6>2HR 18MIN</h6>
+                    <h6 class="info">More Info</h6>
                 </div>
-                <div class="col">
+                <div class="col right">
                     <ul class="showtimes">
-                        <li><a>Showtime One</a></li>
-                        <li><a>Showtime Two</a></li>
-                        <li><a>Showtime Three</a></li>
+                        <li><a>12:00PM</a></li>
+                        <li><a>3:00PM</a></li>
+                        <li><a>5:00PM</a></li>
                     </ul>
-                </div>
-                <div class="col">
-                    <a>More Info</a>
                 </div>
             </div>
         </div>
