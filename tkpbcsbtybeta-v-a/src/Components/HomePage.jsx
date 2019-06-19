@@ -1,4 +1,4 @@
-import React, {style} from 'react';
+import React from 'react';
 import NavBar from './NavBar';
 import Schedule from './Schedule';
 import Info from './Info';
@@ -7,10 +7,12 @@ const HomePage = () => {
     return (
         <div>
             <div className="title">
-                <h3>TkpbCSbtybETA@V+A</h3>
+                <h1>TkpbCSbtybETA@V+A</h1> 
+                <h3>(TheaterKey powered by Clinical Solutions brought to you by Elsevier Tech Associates @ Via + Aries)</h3>
             </div>
             <div>
                 <header><NavBar /></header>
+                <p></p>
             </div>
             <div classname="schedule">
                 <Schedule />
@@ -18,7 +20,6 @@ const HomePage = () => {
             <div className="footer">
                 <footer><Info /></footer>
             </div>
-            <Schedule/>
         </div>
     );
 }
