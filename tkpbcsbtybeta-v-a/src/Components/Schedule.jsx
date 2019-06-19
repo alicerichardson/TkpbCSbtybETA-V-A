@@ -5,6 +5,8 @@ const Schedule = () => {
     return (
         <div>
             <Movie/>
+            <Movie/>
+            <Movie/>
         </div>
     );
 }

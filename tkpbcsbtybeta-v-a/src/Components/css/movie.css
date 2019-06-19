@@ -1,8 +1,9 @@
 .movie {
     border-style: solid;
-    border-color: rgb(39, 8, 39);
+    border-color: rgb(56, 18, 56);
     border-width: 2px;
-    margin: 10px;
+    border-radius: 10px;
+    margin: 20px;
 }
 
 .col {
@@ -15,7 +16,7 @@
 }
 
 .right {
-    width: 60%;
+    width: 70%;
 }
 
 .row {
@@ -44,25 +45,35 @@ h6 {
 
 .info {
     cursor: pointer;
+    color: purple
 }
 
 .showtimes li {
+    border-style: solid;
+    border-color: rgb(56, 18, 56);
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 10px;
     text-decoration: none;
-    display: inline-block;
-    margin: 10px;
+    display: inline;
     font-size: 130%;
     text-align: center;
     cursor: pointer;
+    margin: 10px;
+}
+
+.showtimes li:first-of-type{
+    margin-left: -55%;
 }
 
 .showtimes li a:link,
 .shotimes li a:visited {
-    color: purple;
+    color: rgb(205, 178, 231);
 }
 
 .showtimes li a:hover,
 .showtimes li a:active {
-    color: purple;
+    color: rgb(205, 178, 231);
 }
 
 img {

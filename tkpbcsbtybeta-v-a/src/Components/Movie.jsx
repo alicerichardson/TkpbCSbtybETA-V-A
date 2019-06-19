@@ -5,7 +5,7 @@ import movie from '../movieimg.png';
 const Movie = () => {
     return (
         <div class="movie">
-            <h1>Title</h1>
+            <h1>Best Movie Ever</h1>
             <div class="row">
                 <div class="col left">
                     <img src={movie}></img>

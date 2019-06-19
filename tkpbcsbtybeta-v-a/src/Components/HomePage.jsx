@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import Schedule from './Schedule';
 import Info from './Info';
 import SignUp from './SignUp';
+import './css/homepage.css';
 
 const HomePage = () => {
     return (
