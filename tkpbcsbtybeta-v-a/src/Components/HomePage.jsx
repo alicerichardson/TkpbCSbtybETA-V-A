@@ -4,8 +4,11 @@ import Schedule from './Schedule';
 import Info from './Info';
 import SignUp from './SignUp';
 import './css/homepage.css';
+<<<<<<< HEAD
 import { Wave } from 'react-animated-text';
 
+=======
+>>>>>>> 3cb88fcd12c9c77c7f18232dfb17523b4d66d844
 
 const HomePage = () => {
     return (

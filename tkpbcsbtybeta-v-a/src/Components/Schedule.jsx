@@ -6,6 +6,10 @@ const Schedule = () => {
         <div>
             <Movie/>
             <Movie/>
+<<<<<<< HEAD
+=======
+            <Movie/>
+>>>>>>> 3cb88fcd12c9c77c7f18232dfb17523b4d66d844
         </div>
     );
 }

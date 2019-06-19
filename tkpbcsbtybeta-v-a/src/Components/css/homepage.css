@@ -1,7 +1,20 @@
+<<<<<<< HEAD
 h1 {
     text-transform: none;
 }
 
 .mainTitle{
     font-size: 20px;
+=======
+* {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+}
+.title{
+    background-color: white;
+}
+
+h1 {
+    text-transform: none;
+>>>>>>> 3cb88fcd12c9c77c7f18232dfb17523b4d66d844
 }
