@@ -1,7 +1,9 @@
 .movie {
     border-style: solid;
     border-width: 2px;
+    padding: 15px;
     margin: 10px;
+    background-color: white;
 }
 
 .col {
