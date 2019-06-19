@@ -34,7 +34,7 @@ h6 {
 .showtimes li {
     text-decoration: none;
     display: inline-block;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .showtimes li a:link,
