@@ -1,5 +1,6 @@
 .movie {
     border-style: solid;
+    border-color: rgb(39, 8, 39);
     border-width: 2px;
     padding: 15px;
     margin: 10px;
@@ -7,21 +8,31 @@
 }
 
 .col {
-    float: center;
-    width: 33.33%;
+    float: left;
+    padding: 15px;
 }
-  
+
+.left {
+    width: 30%;
+}
+
+.right {
+    width: 60%;
+}
+
 .row {
     display: flex;
 }
 
 h1 {
     text-align: center;
-    margin-top: 2px;
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 h1,
-h6 {
+h6,
+.info {
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-weight: lighter;
@@ -29,14 +40,21 @@ h6 {
 }
 
 h6 {
-    text-align: left;
-    padding-bottom: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.info {
+    cursor: pointer;
 }
 
 .showtimes li {
     text-decoration: none;
     display: inline-block;
     margin: 10px;
+    font-size: 130%;
+    text-align: center;
+    cursor: pointer;
 }
 
 .showtimes li a:link,
@@ -50,5 +68,6 @@ h6 {
 }
 
 img {
-    width: 100px;
+    width: 50%;
+    height: auto;
 }
