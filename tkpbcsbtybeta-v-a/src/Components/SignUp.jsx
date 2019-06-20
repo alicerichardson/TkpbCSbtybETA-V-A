@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import NavBar from './NavBar';
 import './css/movie.css';
-=======
-import React, { useState } from 'react'
-import './css/movie.css'
->>>>>>> aecdc6968a1629498deefda66bd37eb3c26caa07
 
 const SignUp = () => {
 
@@ -32,6 +27,7 @@ const SignUp = () => {
 
     return (
         <form onSubmit={handleSubmit}>
+            <NavBar/>
             <div>
                 <label>Firstname: </label>
                 <input type="text" name='FirstName' value={FirstName} onChange={handleFirstNameChange}></input>
