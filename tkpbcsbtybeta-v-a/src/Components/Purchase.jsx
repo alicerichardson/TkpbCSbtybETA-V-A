@@ -1,30 +1,30 @@
-import React, {useState, Component} from 'react';
+import React, {useState, useEffect} from 'react';
 
-class Purchase extends Component {
-    state ={count: 0};
-    decrementTickets = () => {
-        this.setState({ count: this.state.count - 1 })
-    }
-
-    incrementTickets = () => {
-        this.setState({ count: this.state.count + 1 })
-    }
-
-    handleSubmit = (event) => {
+const Purchase = () => {
+    const [count, setCount] = useState(0);
+    const decrementTickets = (event) => {
         event.preventDefault()
-        this.props.submitPurchase(this.tickets)
+        if(count>0){
+            setCount(count - 1)
+        }
     }
-    render() {
+    const incrementTickets = (event) => { 
+        event.preventDefault()
+        setCount(count + 1)
+    }
+
         return(
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form>
                     <p>Select number of tickets:</p>
-                    <button onClick={this.decrementTickets}>-</button>
-                    <button onClick={this.incrementTickets}>+</button>
+                    <if><button onClick={decrementTickets}>-</button></if>
+                    <button onClick={incrementTickets}>+</button>
+                    <p>
+                        Current number of tickets: {count}
+                    </p>
                     <button type='submit'>Submit</button>
                 </form>
             </div>
         );
-    }
 }
 export default Purchase;
