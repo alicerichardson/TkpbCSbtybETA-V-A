@@ -3,9 +3,23 @@
     font-weight: lighter;
 }
 .title{
-    background-color: white;
+    background-color: rgb(212, 195, 228);
+    margin-left: 0px;
+    align-content: center;
 }
 
 h1 {
     text-transform: none;
+    font-style: bold;
+}
+
+img{
+    float:left;
+    width: 7%;
+    height:auto;
+    margin-left: 7px;
+}
+
+header{
+    width:100%;
 }

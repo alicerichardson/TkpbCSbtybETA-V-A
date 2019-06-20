@@ -1,17 +1,30 @@
 .btn-group button {
     background-color: rgb(212, 195, 228); 
-    border: 4px solid rgb(212, 195, 228) ; 
+    border: 4px solid rgb(212, 195, 228); 
     color: white;
-    padding: 10px 24px;
     cursor: pointer;
+    padding: 10px 24px;
     float: center;
     font-size: 24px;
-    width: 20%;
-    
-  }
+    width: 20%;   
+    height: auto; 
+    outline: none;
+}
+
+.btn-group button:link,
+.btn-group button:hover{
+    border: 4px solid rgb(212, 195, 228); 
+    color: black;
+}
+
+.btn-group button:active{
+    position: relative;
+    top:2px;
+    border: 4px solid rgb(212, 195, 228); 
+}
 
 .btn-group {
     align-content: center;
-    border-radius: 8px;
     border: 4px solid rbg(205, 178, 231);
+    display: fixed;
 }
