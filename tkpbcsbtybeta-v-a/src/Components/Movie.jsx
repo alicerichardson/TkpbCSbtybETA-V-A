@@ -1,16 +1,19 @@
 import React from 'react';
 import './css/movie.css';
-import movie from '../movieimg.png';
+import movieImg from '../movieimg.png';
 
-const Movie = () => {
+const Movie = ({movie}) => {
+
+    //const movie = 'test';
+
     return (
         <div class="movie">
-            <h1>{this.props.movieTitle}</h1>
+            <h1>{movie.name}</h1>
             <div class="row">
                 <div class="col left">
-                    <img src={movie}></img>
-                    <h6>PG13</h6>
-                    <h6>2HR 18MIN</h6>
+                    {/* <img src={movieImg}></img> */}
+                    <h6>{movie.rating}</h6>
+                    <h6>{movie.runtime}</h6>
                     <h6 class="info">More Info</h6>
                 </div>
                 <div class="col right">
