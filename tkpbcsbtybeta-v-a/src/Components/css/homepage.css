@@ -1,12 +1,11 @@
 * {
     font-family: 'Lato', sans-serif;
-    font-weight: lighter;
-    
+    font-weight: lighter;  
 }
 
 html {
     background-color: rgb(212, 195, 228);
-}
+} 
 
 .title{
     background-color: rgb(212, 195, 228);
