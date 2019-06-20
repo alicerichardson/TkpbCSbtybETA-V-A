@@ -1,30 +1,50 @@
-import React, {useState, Component} from 'react';
+import React, {useState} from 'react';
 
-class Purchase extends Component {
-    state ={count: 0};
-    decrementTickets = () => {
-        this.setState({ count: this.state.count - 1 })
-    }
-
-    incrementTickets = () => {
-        this.setState({ count: this.state.count + 1 })
-    }
-
-    handleSubmit = (event) => {
+const Purchase = () => {
+    const [adultTickets, setAdultTickets] = useState(0);
+    const [childTickets, setChildTickets] = useState(0);
+    const decrementAdultTickets = (event) => {
         event.preventDefault()
-        this.props.submitPurchase(this.tickets)
+        if(adultTickets>0){
+            setAdultTickets(adultTickets - 1)
+        }
     }
-    render() {
+    const incrementAdultTickets = (event) => { 
+        event.preventDefault()
+        setAdultTickets(adultTickets + 1)
+    }
+
+    const decrementChildTickets = (event) => {
+        event.preventDefault()
+        if(childTickets>0){
+            setChildTickets(childTickets - 1)
+        }
+    }
+    const incrementChildTickets = (event) => { 
+        event.preventDefault()
+        setChildTickets(childTickets + 1)
+    }
+    
+
         return(
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <p>Select number of tickets:</p>
-                    <button onClick={this.decrementTickets}>-</button>
-                    <button onClick={this.incrementTickets}>+</button>
+                <form>
+                    <p>Select number of adult tickets:</p>
+                        <button onClick={decrementAdultTickets}>-</button>
+                        <button onClick={incrementAdultTickets}>+</button>
+                    <p>
+                        Current number of adult tickets: {adultTickets}
+                    </p>
+                    
+                    <p>Select number of child tickets:</p>
+                        <button onClick={decrementChildTickets}>-</button>
+                        <button onClick={incrementChildTickets}>+</button>
+                    <p>
+                        Current number of child tickets: {childTickets}
+                    </p>
                     <button type='submit'>Submit</button>
                 </form>
             </div>
         );
-    }
 }
 export default Purchase;
