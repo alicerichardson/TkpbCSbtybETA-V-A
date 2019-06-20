@@ -34,7 +34,6 @@ const SignUp = (props) => {
 
     return (
         <div>
-            <NavBar />
         <form onSubmit={handleSubmit}>
             <div>
                 <label>Firstname: </label>

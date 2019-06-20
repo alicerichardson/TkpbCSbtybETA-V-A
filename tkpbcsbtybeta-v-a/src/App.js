@@ -5,13 +5,14 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import SignUp from './Components/SignUp';
 import Info from './Components/Info';
 import Purchase from './Components/Purchase';
+import RetrieveData from './Components/RetrieveData';
 
 function App() {
   const routing = (
     <Router>
       <div className="container">
         <Route path="/" component={HomePage} exact/>
-        <Route path="/signup" component={SignUp}/>
+        <Route path="/signup" component={RetrieveData}/>
         <Route path="/contact" component={Info}/>
         <Route path="/purchase" component={Purchase}/>
       </div>

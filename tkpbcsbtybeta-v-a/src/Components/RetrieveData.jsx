@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import SignUp from './SignUp'
+import SignUp from './SignUp';
+import NavBar from './NavBar';
 
 function RetrieveData () {
     const [FirstName, setFirstName] = useState('not given')
@@ -22,6 +23,7 @@ function RetrieveData () {
 
     return (
         <div className="RetrieveData">
+            <NavBar />
             <h3>Firstname: {FirstName}</h3>
             <h3>Lastname: {LastName}</h3>
             <h3>Email: {Email}</h3>
