@@ -1,9 +1,11 @@
 import React from 'react';
+import NavBar from './NavBar';
 import './css/movie.css';
 
 const SignUp = () => {
     return (
         <div>
+            <NavBar/>
         <form>
 
             <p>First Name: <input type="text" name="FirstName" /></p>

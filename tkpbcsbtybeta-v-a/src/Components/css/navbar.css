@@ -14,7 +14,7 @@
 .btn-group button:link,
 .btn-group button:hover{
     border: 4px solid rgb(212, 195, 228); 
-    color: black;
+    color: rgb(56, 18, 56);
 }
 
 .btn-group button:active{

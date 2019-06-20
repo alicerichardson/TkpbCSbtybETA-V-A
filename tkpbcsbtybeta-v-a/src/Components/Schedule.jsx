@@ -1,17 +1,28 @@
-import React from 'react';
+import React, {useState,useEffect} from 'react';
 import Movie from './Movie';
+//import axios from 'axios';
 
 const Schedule = () => {
 
-    const movie = [
-        {name: 'Movie One', rating: 'Rating One', runtime: 'Runtime One'},
-        {name: 'Movie Two', rating: 'Rating Two', runtime: 'Runtime Two'}
+    const movies = [
+        {name: 'Movie One', rating: 'sdf', runtime: 'test'},
+        {name: 'Movie One', rating: 'sdf', runtime: 'test'}
     ]
+
+    // const [movies, setMovies] = useState([])
+    // useEffect(() => {
+    //     let getData = async() => {
+    //     let response = await axios.get('http://localhost:3000/movies')
+    //     let movies = await response.data
+    //     setMovies(movies)
+    // }
+    // getData()
+    // },[])
 
     return (
         <div>
-            <Movie movie={movie[0]}/>
-            <Movie movie={movie[1]}/>
+            <Movie movie={movies[0]}/>
+            <Movie movie={movies[1]}/>
         </div>
     );
 }

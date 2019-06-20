@@ -22,9 +22,6 @@ const HomePage = () => {
             <div classname="schedule">
                 <Schedule />
             </div>
-            <div classname="signup">
-                <SignUp />
-            </div>
             <div className="footer">
                 <footer><Info /></footer>
             </div>
