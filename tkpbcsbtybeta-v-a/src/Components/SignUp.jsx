@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './css/movie.css'
+import NavBar from './NavBar';
 
 const SignUp = () => {
 
@@ -25,6 +26,8 @@ const SignUp = () => {
     }
 
     return (
+        <div>
+            <NavBar />
         <form onSubmit={handleSubmit}>
             <div>
                 <label>Firstname: </label>
@@ -44,6 +47,7 @@ const SignUp = () => {
             </div>
                 <button type='submit'>Sign Up!</button>
         </form>
+        </div>
     )
 }
 export default SignUp

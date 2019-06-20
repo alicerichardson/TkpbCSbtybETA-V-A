@@ -2,7 +2,6 @@ import React from 'react';
 import NavBar from './NavBar';
 import Schedule from './Schedule';
 import Info from './Info';
-import SignUp from './SignUp';
 import './css/homepage.css';
 import { Wave, Random } from 'react-animated-text';
 import CinemaKey from '../CinemaKey.jpg';
@@ -13,7 +12,7 @@ const HomePage = () => {
         <div>
             <div className="title">
                 <img src={CinemaKey}></img>
-                <h1><Random effect="stretch" className="mainTitle" text='TkpbCSbtybETA@V+A' /></h1>
+                <h1><Random className="mainTitle" text='TkpbCSbtybETA@V+A' /></h1>
                 <h3>(TheaterKey powered by Clinical Solutions brought to you by Elsevier Tech Associates @ Via + Aries)</h3>
             </div>
             <div>
@@ -21,9 +20,6 @@ const HomePage = () => {
             </div>
             <div classname="schedule">
                 <Schedule />
-            </div>
-            <div classname="signup">
-                <SignUp />
             </div>
             <div className="footer">
                 <footer><Info /></footer>
