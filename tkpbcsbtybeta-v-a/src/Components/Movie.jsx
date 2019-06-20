@@ -5,7 +5,7 @@ import movie from '../movieimg.png';
 const Movie = () => {
     return (
         <div class="movie">
-            <h1>Best Movie Ever</h1>
+            <h1>{this.props.movieTitle}</h1>
             <div class="row">
                 <div class="col left">
                     <img src={movie}></img>
