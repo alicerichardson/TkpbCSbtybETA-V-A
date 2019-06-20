@@ -6,7 +6,7 @@
     padding: 10px 24px;
     float: center;
     font-size: 24px;
-    width: 20%;   
+    width: relative;   
     height: auto; 
     outline: none;
 }

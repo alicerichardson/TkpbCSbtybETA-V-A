@@ -1,11 +1,9 @@
 import React from 'react';
 import './css/movie.css';
 import movieImg from '../movieimg.png';
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 
 const Movie = ({movie}) => {
-
-    //const movie = 'test';
-
     return (
         <div class="movie">
             <h1>{movie.name}</h1>
@@ -22,6 +20,9 @@ const Movie = ({movie}) => {
                         <li><a>3:00PM</a></li>
                         <li><a>5:00PM</a></li>
                     </ul>
+                </div>
+                <div>
+                    <Link to="/purchase"><button class ="purchase">Purchase</button></Link>
                 </div>
             </div>
         </div>

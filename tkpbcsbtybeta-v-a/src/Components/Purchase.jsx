@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import './css/purchase.css';
+import NavBar from './NavBar';
 
 const Purchase = () => {
     const [adultTickets, setAdultTickets] = useState(0);
@@ -28,6 +30,12 @@ const Purchase = () => {
 
         return(
             <div>
+                <div>
+                    <NavBar />
+                </div>
+                <div className="purchaseTitle">
+                    <h3>Purchase Tickets:</h3>
+                </div>
                 <form>
                     <p>Select number of adult tickets:</p>
                         <button onClick={decrementAdultTickets}>-</button>
@@ -42,7 +50,7 @@ const Purchase = () => {
                     <p>
                         Current number of child tickets: {childTickets}
                     </p>
-                    <button type='submit'>Submit</button>
+                    <button className="submit" type='submit'>Submit</button>
                 </form>
             </div>
         );

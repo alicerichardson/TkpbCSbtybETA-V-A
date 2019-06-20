@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import ReactDOM from 'react-dom';
-import App from './App';;
+import App from './App';
 import NavBar from './Components/NavBar';
 import Info from './Components/Info';
 import HomePage from './Components/HomePage';
@@ -46,7 +46,6 @@ describe('Test elements', () => {
     const div = document.createElement('div');
   })
 })
-
 
 describe('Addition', () => {
   it('knows that 2 and 2 make 4', () => {

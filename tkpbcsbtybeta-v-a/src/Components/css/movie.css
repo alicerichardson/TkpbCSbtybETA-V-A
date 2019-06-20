@@ -82,3 +82,14 @@ img {
     width: 50%;
     height: auto;
 }
+
+.purchase{
+    background-color: rgb(205, 178, 231);
+    border-color: rgb(205, 178, 231);
+    color: white;
+    margin-right: 10px;
+}
+
+.purchase:hover{
+    color: black;
+}
