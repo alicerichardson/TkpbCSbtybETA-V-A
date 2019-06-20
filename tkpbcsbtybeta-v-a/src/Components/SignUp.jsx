@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import './css/movie.css'
 
-const SignUp = () => {
+
+const SignUp = (props) => {
 
     const [FirstName, setFirstName] = useState('')
     const [LastName, setLastName] = useState('')
@@ -21,7 +22,13 @@ const SignUp = () => {
         setBirthday([event.target.value])
     }
     const handleSubmit = (event) => {
-        alert(`${FirstName} ${LastName} ${Email} ${Birthday}`)
+        //alert(`${FirstName} ${LastName} ${Email} ${Birthday}`)
+        event.preventDefault()
+        props.submitFirstName(FirstName)
+        props.submitLastName(LastName)
+        props.submitEmail(Email)
+        props.submitBirthday(Birthday)
+
     }
 
     return (
