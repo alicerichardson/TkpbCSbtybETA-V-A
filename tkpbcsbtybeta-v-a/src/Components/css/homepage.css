@@ -2,6 +2,12 @@
     font-family: 'Lato', sans-serif;
     font-weight: lighter;
 }
+
+html{
+    background-color: rbg(212, 195, 228);
+
+}
+
 .title{
     background-color: rgb(212, 195, 228);
     margin-left: 0px;

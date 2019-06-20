@@ -6,3 +6,8 @@
 .socials{
     padding-right:10px;
 }
+
+.container{
+    height: 100%;
+    width: 100%;
+}

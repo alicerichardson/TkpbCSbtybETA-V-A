@@ -1,15 +1,16 @@
 import React from 'react';
 import './css/navbar.css';
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 
 const NavBar = () => {
     return (
         <div className="navbar">
             <div className="btn-group">
-                <button className = "home">Home</button>
-                <button className = "signup">Sign Up</button>
+                <Link to="/"><button className = "home">Home</button></Link>
+                <Link to="/signup"><button className = "signup">Sign Up</button></Link>
                 <button className = "food">Concessions</button>
                 <button className = "access">Accessibility</button>
-                <button className = "contact">Contact Info</button>
+                <Link to="/contact"><button className = "contact">Contact Info</button></Link>
             </div>
         </div>
     );

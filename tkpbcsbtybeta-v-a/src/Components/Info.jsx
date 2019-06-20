@@ -5,7 +5,7 @@ import './css/info.css';
 
 const Info = () => {
     return (
-        <div>
+        <div className="container">
             <p className="hours">Theater Hours: 9:00AM - 11:00 PM Mon - Sat</p>
             <div className="socials">
                 <SocialIcon network="twitter" class="tw"/>
