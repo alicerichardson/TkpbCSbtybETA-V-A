@@ -6,7 +6,6 @@ const Schedule = () => {
         <div>
             <Movie movieTitle={"Test Movie"}/>
             <Movie/>
-            <Movie/>
         </div>
     );
 }

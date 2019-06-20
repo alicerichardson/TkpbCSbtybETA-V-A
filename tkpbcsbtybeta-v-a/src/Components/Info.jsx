@@ -8,7 +8,7 @@ const Info = () => {
         <div>
             <p className="hours">Theater Hours: 9:00AM - 11:00 PM Mon - Sat</p>
             <div className="socials">
-                <SocialIcon network="twitter"/>
+                <SocialIcon network="twitter" class="tw"/>
                 <SocialIcon network="instagram"/>
                 <SocialIcon network="facebook"/>
                 <SocialIcon network="snapchat"/>
