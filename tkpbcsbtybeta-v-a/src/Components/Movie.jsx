@@ -18,7 +18,10 @@ const Movie = ({movie}) => {
                 </div>
                 <div class="col center">
                     <ul>
-                        {movie.showtimes.map((value, index) => {return <Link to={{pathname:"/purchase", state:{time: value} }}><li class="showtimes" key={index}>{value}</li></Link>})}
+                        {movie.showtimes.map((value, index) => {return <Link to={{pathname:"/purchase", 
+                                state:{time: value, name: movie.name, rating: movie.rating, 
+                                runtime: movie.runtime, showtimes: movie.showtimes} }}>
+                                    <li class="showtimes" key={index}>{value}</li></Link>} ) }
                     </ul>
                 </div>
                 <div>

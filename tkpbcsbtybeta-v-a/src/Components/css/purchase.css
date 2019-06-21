@@ -39,20 +39,30 @@ p{
     width: 30%;
 }
 
-.showtimes li{
-    align-content: center;
-    align-items: center;
-    border-color: white;
-    background-color: white;
-
+.showtimes1{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 100px;
+    width: 100px;
+    padding: 10px;
 }
 
-.showtimes li:link,
-.showtimes li:visited{
-    color:rgb(212, 195, 228);
+.individualTimes li {
+    align-content: left;
+    list-style: none;
+    display: inline-block;
+    border: 2px black solid;
 }
 
-.showtimes li:first-of-type{
+.individualTimes li:hover,
+.individualTimes li:active {
+    color: rgb(212, 195, 228);
+    cursor: pointer;
+}
+
+.individualTimes li:first-of-type{
     margin-left: -15%;
 }
 

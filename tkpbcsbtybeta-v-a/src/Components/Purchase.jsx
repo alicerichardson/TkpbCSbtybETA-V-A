@@ -42,15 +42,13 @@ const Purchase = (props) => {
                 <div class="row">
                     <div class="column">
                         <div className="purchaseTitle">
-                            <h2>Purchase Tickets for {props.location.state.name}:</h2>
+                            <h2>Purchase Tickets for {props.location.state.name} at {props.location.state.time}:</h2>
                             <p>This movie is rated {props.location.state.rating} and runs for {props.location.state.runtime} </p>
                         </div>
                         <div className="times">
                             <p>Select your movie time</p>
-                            <ul class="showtimes">
-                                <li><a>12:00PM</a></li>
-                                <li><a>3:00PM</a></li>
-                                <li><a>5:00PM</a></li>
+                            <ul class="showtimes1">
+                                {props.location.state.showtimes.map((value, index) => {return <li class="individualTimes" key={index}>{value}</li>})}
                             </ul>
                         </div>
                     </div>
