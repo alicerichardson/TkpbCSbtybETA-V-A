@@ -7,9 +7,11 @@ const Movie = ({movie}) => {
     return (
         <div class="movie">
             <h1>{movie.name}</h1>
+            <div class=" col leftleft">
+                <img src={movieImg}></img>
+            </div>
             <div class="row">
                 <div class="col left">
-                    <img src={movieImg}></img>
                     <h6>{movie.rating}</h6>
                     <h6>{movie.runtime}</h6>
                     <h6 class="info">More Info</h6>
