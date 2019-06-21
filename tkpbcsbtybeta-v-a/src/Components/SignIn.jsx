@@ -19,7 +19,7 @@ const SignIn = () => {
 export default SignIn;
 */
 const SignIn = () => (
-    <Popup trigger={<button>Sign In</button>} position="right">
+    <Popup trigger={<button>Sign In</button>} position="left top">
         <div>
             <form>
                 <p>Username: <input type="text" name="Username" /></p>
