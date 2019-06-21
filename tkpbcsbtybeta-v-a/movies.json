@@ -1,19 +1,27 @@
 {
-    "movies" : [
-        {
-        "name": "Movie One",
-        "rating": "Rating One",
-        "runtime": "Runtime One"
-        },
-        {
-        "name": "Movie Two",
-        "rating": "Rating Two",
-        "runtime": "Runtime Two"
-        },
-        {
-        "name": "Movie Three",
-        "rating": "Rating Three",
-        "runtime": "Runtime Three"
-        }
-    ]
+	"movies": [{
+			"name": "Super Happy Movie",
+			"rating": "PG13",
+			"runtime": "3HR 40MIN",
+			"showtimes": ["5:00PM", "3:00PM", "12:00PM"]
+		},
+		{
+			"name": "Great Action Film",
+			"rating": "R",
+			"runtime": "1HR 58MIN",
+			"showtimes": ["3:00PM", "12:00PM"]
+		},
+		{
+			"name": "So Much Comedy",
+			"rating": "PG",
+			"runtime": "2HR 08MIN",
+			"showtimes": ["7:00PM", "5:00PM", "3:00PM", "12:00PM"]
+		},
+		{
+			"name": "Drama on Drama",
+			"rating": "PG13",
+			"runtime": "2HR 28MIN",
+			"showtimes": ["12:00PM"]
+		}
+	]
 }

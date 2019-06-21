@@ -3,18 +3,17 @@ import Movie from './Movie';
 import axios from 'axios';
 
 const Schedule = () => {
-    
+
     const [movies, setMovies] = useState([])
     useEffect(() => {
         let getData = async() => {
         let response = await axios.get('http://localhost:3000/movies')
-        console.log(response);
         let movies = await response.data
         setMovies(movies)
     }
     getData()
     },[])
-
+    
     return (
         <div>
             {movies.map(movie => <Movie key={movie.name} movie={movie}/>)}
