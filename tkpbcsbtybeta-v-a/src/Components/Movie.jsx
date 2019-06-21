@@ -22,7 +22,7 @@ const Movie = ({movie}) => {
                     </ul>
                 </div>
                 <div>
-                    <Link to="/purchase"><button class ="purchase">Purchase</button></Link>
+                    <Link to={`/purchase/${movie.name}`}><button class ="purchase">Purchase</button></Link>
                 </div>
             </div>
         </div>

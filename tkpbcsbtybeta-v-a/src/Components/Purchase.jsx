@@ -2,15 +2,23 @@ import React, {useState} from 'react';
 import './css/purchase.css';
 import NavBar from './NavBar';
 
-const Purchase = () => {
+const Purchase = (props) => {
     const [adultTickets, setAdultTickets] = useState(0);
     const [childTickets, setChildTickets] = useState(0);
+    const [movie] = props.match.params.name;
+/*
+    const handleMovieSelection = (event) => {
+        event.preventDefault()
+        this.getMovie(movie.name)
+    }
+*/
     const decrementAdultTickets = (event) => {
         event.preventDefault()
         if(adultTickets>0){
             setAdultTickets(adultTickets - 1)
         }
     }
+
     const incrementAdultTickets = (event) => { 
         event.preventDefault()
         setAdultTickets(adultTickets + 1)
@@ -26,7 +34,6 @@ const Purchase = () => {
         event.preventDefault()
         setChildTickets(childTickets + 1)
     }
-    
 
         return(
             <div>
@@ -34,7 +41,7 @@ const Purchase = () => {
                     <NavBar />
                 </div>
                 <div className="purchaseTitle">
-                    <h3>Purchase Tickets:</h3>
+                    <h3>Purchase Tickets for {props.match.params.name}:</h3>
                 </div>
                 <form>
                     <p>Select number of adult tickets:</p>
