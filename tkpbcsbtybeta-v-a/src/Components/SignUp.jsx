@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import NavBar from './NavBar';
-import './css/movie.css';
+import signUpTheater from  '../signUpTheater.png';
 
 
 const SignUp = (props) => {
@@ -34,6 +34,9 @@ const SignUp = (props) => {
 
     return (
         <div>
+            <p>
+                <img src={signUpTheater}></img>   
+            </p> 
         <form onSubmit={handleSubmit}>
             <div>
                 <label>Firstname: </label>
@@ -51,56 +54,11 @@ const SignUp = (props) => {
                 <label>Birthday: </label>
                 <input type="date" name='Birthday' value={Birthday} onChange={handleBirthdayChange}></input>
             </div>
+            <div>
                 <button type='submit'>Sign Up!</button>
+            </div>
         </form>
         </div>
     )
 }
 export default SignUp
-
-/*
-const SignUp = () => {
-    return (
-        <div>
-            <NavBar/>
-        <form>
-
-            <p>First Name: <input type="text" name="FirstName" /></p>
-            <p>Last Name: <input type="text" name="LastName" /></p>
-            <p>E-mail: <input type="text" name="Email" placeholder="user@domain.com" /></p>
-            <p>Birthday: <input type="date" name="Birthday" /></p>
-
-            <p><input type="submit" value="Sign Up!" /></p>
-
-        </form>
-        </div>
-    );
-}
-
-
-
-const SignUp = (props) => {
-    const [FirstName, setFirstName] = useState('')
-    const [LastName, setLastName] = useState('')
-    const [email, setEmail] = useState('')
-    const [Birthday, setBirthday] = useState('')
-
-    const handleFirstName = (event) => {
-        setFirstName([event.target.value])
-    }
-
-    const handleLastName = (event) => {
-        setLastName([event.target.value])
-    }
-
-    const handleEmail = (event) => {
-        setEmail([event.target.value])
-    }
-
-    const handleBirthday = (event) => {
-        setBirthday([event.target.value])
-    }
-
-
-}
-*/
