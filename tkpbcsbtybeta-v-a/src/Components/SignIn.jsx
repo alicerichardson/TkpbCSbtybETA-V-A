@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Popup from 'reactjs-popup';
 import './css/movie.css';
 import axios from 'axios';
@@ -41,25 +41,19 @@ const SignIn = (props) => {
         }
         console.log("false");
     }
-    return (
-        <div>
+    return(
+        <Popup trigger={<button>Sign In</button>} position="left top">
             <div>
-                {/*{users.map(user => <User key={user.name} user={user}/>)}*/}
+                <form>
+                    <p>Username: <input type="text" name="Username" /></p>
+                    <p>Password: <input type="text" name="Password" /></p>
+                    <br />
+                    <p>Stay logged in: <input type="checkbox" name="StaySignedIn" /></p>
+                    <p><input type="submit" value="Sign-in" /></p>
+                </form>
             </div>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Username: </label>
-                    <input type="text" name='Username' value={username} onChange={handleUsernameChange}></input>
-                </div>
-                <div>
-                    <label>Password: </label>
-                    <input type="text" name='Password' value={password} onChange={handlePasswordChange}></input>
-                </div>
-                <br />
-                <p>Stay logged in: <input type="checkbox" name="StaySignedIn" /></p>
-                <p><input type="submit" value="Sign-in" /></p>
-            </form>
-        </div>
-    );
+        </Popup>
+    )
+
 }
 export default SignIn;

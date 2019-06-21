@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/movie.css';
-//import movieImg from '../movieimg.png';
+import movieImg from '../movieimg.png';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 const Movie = ({movie}) => {
@@ -16,7 +16,7 @@ const Movie = ({movie}) => {
                 </div>
                 <div class="col center">
                     <ul>
-                        {movie.showtimes.map((value, index) => {return <li class="showtimes" key={index}>{value}</li>})}
+                        {movie.showtimes.map((value, index) => {return <Link to={{pathname:"/purchase", state:{time: value} }}><li class="showtimes" key={index}>{value}</li></Link>})}
                     </ul>
                 </div>
                 <div>
