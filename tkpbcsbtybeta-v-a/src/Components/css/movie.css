@@ -59,9 +59,9 @@ h6 {
     list-style: none;
     display: inline-block;
     margin: 20px;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 100px;
-    width: 100px;
+    width: 70px;
     padding: 10px;
 }
 
@@ -75,7 +75,6 @@ h6 {
     cursor: pointer;
     color: rgb(56, 18, 56);
     text-decoration: underline;
-    margin-top: 20px;
 }
 
 img {
