@@ -43,6 +43,11 @@ h1 {
     margin-right: 7px;
 }
 
+.signupBanner{
+    width: 75%;
+    height: auto;
+}
+
 header{
     width:100%;
 }
