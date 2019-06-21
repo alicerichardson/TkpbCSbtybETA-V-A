@@ -6,14 +6,13 @@ import SignUp from './Components/SignUp';
 import Info from './Components/Info';
 import Purchase from './Components/Purchase';
 import RetrieveData from './Components/RetrieveData';
-import SignIn from './Components/SignIn';
 
 function App() {
   const routing = (
     <Router>
       <div className="container">
         <Route path="/" component={HomePage} exact/>
-        <Route path="/signup" component={RetrieveData}/>
+        <Route path="/signup" component={SignUp}/>
         <Route path="/contact" component={Info}/>
         <Route path="/purchase" component={Purchase}/>
         <Route path="/signin" component={SignIn}/>

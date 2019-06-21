@@ -1,4 +1,5 @@
-import React, {useState,useEffect} from 'react';
+import React from 'react';
+import Popup from 'reactjs-popup';
 import './css/movie.css';
 import axios from 'axios';
 
@@ -40,7 +41,6 @@ const SignIn = (props) => {
         }
         console.log("false");
     }
-
     return (
         <div>
             <div>
