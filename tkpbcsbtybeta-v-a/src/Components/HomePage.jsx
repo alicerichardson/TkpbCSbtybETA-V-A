@@ -5,15 +5,19 @@ import Info from './Info';
 import './css/homepage.css';
 import { Wave, Random } from 'react-animated-text';
 import CinemaKey from '../CinemaKey.jpg';
+import SignIn from './SignIn';
 
 
 const HomePage = () => {
     return (
         <div>
             <div className="title">
-                <img src={CinemaKey}></img>
+                <img class="logo" src={CinemaKey}></img>
+                <div class="signin">
+                    <SignIn />
+                </div>
                 <h1><Random className="mainTitle" text='TkpbCSbtybETA@V+A' /></h1>
-                <h3>(TheaterKey powered by Clinical Solutions brought to you by Elsevier Tech Associates @ Via + Aries)</h3>
+                <h3>(TheaterKey powered by Clinical Solutions brought to you by Elsevier Tech Associates @ Via + Aries)</h3> 
             </div>
             <div>
                 <header><NavBar /></header>
