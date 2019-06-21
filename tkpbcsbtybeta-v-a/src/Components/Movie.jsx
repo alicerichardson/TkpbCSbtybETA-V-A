@@ -7,10 +7,10 @@ const Movie = ({movie}) => {
     return (
         <div class="movie">
             <h1>{movie.name}</h1>
-            <div class=" col leftleft">
-                <img src={movieImg}></img>
-            </div>
             <div class="row">
+                <div class="col leftleft">
+                    <img src={movieImg}></img>
+                </div>
                 <div class="col left">
                     <h6>{movie.rating}</h6>
                     <h6>{movie.runtime}</h6>
@@ -24,7 +24,7 @@ const Movie = ({movie}) => {
                                     <li class="showtimes" key={index}>{value}</li></Link>} ) }
                     </ul>
                 </div>
-                <div>
+                <div class="col right">
                     <Link to={{ pathname:"/purchase", state:{name: movie.name, rating: movie.rating, runtime: movie.runtime} }}><button class ="purchase">Purchase</button></Link>
                 </div>
             </div>
