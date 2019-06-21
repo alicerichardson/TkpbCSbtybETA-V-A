@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Popup from 'reactjs-popup';
 import './css/movie.css';
 import axios from 'axios';
