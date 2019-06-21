@@ -11,6 +11,51 @@ button {
     outline: none;
 }
 
+.tickets button:hover{
+    background-color:red;
+}
+
+.tickets button:active,
+.tickets button:link{
+    position:relative;
+    top:2px;
+}
+
+p{
+    font-size: 18pt;
+}
+
+.row{
+    align-content: center;
+    margin-top: 5%;
+}
+
+.column{
+    float: left;
+    width: 33.33%;
+}
+
+.left {
+    width: 30%;
+}
+
+.showtimes li{
+    align-content: center;
+    align-items: center;
+    border-color: white;
+    background-color: white;
+
+}
+
+.showtimes li:link,
+.showtimes li:visited{
+    color:rgb(212, 195, 228);
+}
+
+.showtimes li:first-of-type{
+    margin-left: -15%;
+}
+
 .submit{
     background-color: cadetblue;
 }

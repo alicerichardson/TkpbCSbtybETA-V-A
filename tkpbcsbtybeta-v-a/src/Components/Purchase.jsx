@@ -5,7 +5,6 @@ import NavBar from './NavBar';
 const Purchase = (props) => {
     const [adultTickets, setAdultTickets] = useState(0);
     const [childTickets, setChildTickets] = useState(0);
-    const [movie] = props.match.params.name;
 /*
     const handleMovieSelection = (event) => {
         event.preventDefault()
@@ -40,25 +39,48 @@ const Purchase = (props) => {
                 <div>
                     <NavBar />
                 </div>
-                <div className="purchaseTitle">
-                    <h3>Purchase Tickets for {props.match.params.name}:</h3>
+                <div class="row">
+                    <div class="column">
+                        <div className="purchaseTitle">
+                            <h2>Purchase Tickets for {props.location.state.name}:</h2>
+                            <p>This movie is rated {props.location.state.rating} and runs for {props.location.state.runtime} </p>
+                        </div>
+                        <div className="times">
+                            <p>Select your movie time</p>
+                            <ul class="showtimes">
+                                <li><a>12:00PM</a></li>
+                                <li><a>3:00PM</a></li>
+                                <li><a>5:00PM</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class = "column">
+                        <form>
+                            <div class="tickets">
+                            <p>Select number of adult tickets: {adultTickets}</p>
+                                <button onClick={decrementAdultTickets}>-</button>
+                                <button onClick={incrementAdultTickets}>+</button>
+                            
+                            <p>Select number of child tickets: {childTickets}</p>
+                                <button onClick={decrementChildTickets}>-</button>
+                                <button onClick={incrementChildTickets}>+</button>
+                            <p></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class = "column">
+                        <form>
+                            <div className="cardInfo">
+                                <p>Enter your card information</p>
+                                <p><input type="text" name='Cardholder name' placeholder="Cardholder name"></input></p>
+                                <p><input type="text" name='Card number' placeholder="Card number"></input></p>
+                                <p><input type="text" name='CVV' placeholder="CVV"></input></p>
+                                <p><input type="date" name='Expiration date' placeholder="Expiration Date"></input></p>
+                            </div>
+                            <button className="submit" type='submit'>Submit</button>
+                        </form>
+                    </div>
                 </div>
-                <form>
-                    <p>Select number of adult tickets:</p>
-                        <button onClick={decrementAdultTickets}>-</button>
-                        <button onClick={incrementAdultTickets}>+</button>
-                    <p>
-                        Current number of adult tickets: {adultTickets}
-                    </p>
-                    
-                    <p>Select number of child tickets:</p>
-                        <button onClick={decrementChildTickets}>-</button>
-                        <button onClick={incrementChildTickets}>+</button>
-                    <p>
-                        Current number of child tickets: {childTickets}
-                    </p>
-                    <button className="submit" type='submit'>Submit</button>
-                </form>
             </div>
         );
 }
