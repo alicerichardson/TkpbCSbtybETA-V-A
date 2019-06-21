@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import NavBar from './NavBar';
 import signUpTheater from  '../signUpTheater.png';
 
-
 const SignUp = (props) => {
 
     const [FirstName, setFirstName] = useState('')
@@ -34,8 +33,9 @@ const SignUp = (props) => {
 
     return (
         <div>
+            <NavBar />
             <p>
-                <img src={signUpTheater}></img>   
+                <img class="signupBanner" src={signUpTheater}></img>   
             </p> 
         <form onSubmit={handleSubmit}>
             <div>
@@ -55,7 +55,9 @@ const SignUp = (props) => {
                 <input type="date" name='Birthday' value={Birthday} onChange={handleBirthdayChange}></input>
             </div>
             <div>
-                <button type='submit'>Sign Up!</button>
+                <p>
+                    <button type='submit'>Sign Up!</button>
+                </p>
             </div>
         </form>
         </div>
