@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/movie.css';
-//import movieImg from '../movieimg.png';
+import movieImg from '../movieimg.png';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 const Movie = ({movie}) => {
