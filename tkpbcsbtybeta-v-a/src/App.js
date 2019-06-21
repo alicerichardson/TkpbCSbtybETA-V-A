@@ -6,6 +6,7 @@ import SignUp from './Components/SignUp';
 import Info from './Components/Info';
 import Purchase from './Components/Purchase';
 import RetrieveData from './Components/RetrieveData';
+import SignIn from './Components/SignIn';
 
 function App() {
   const routing = (
@@ -14,7 +15,8 @@ function App() {
         <Route path="/" component={HomePage} exact/>
         <Route path="/signup" component={RetrieveData}/>
         <Route path="/contact" component={Info}/>
-        <Route path="/purchase/:name" component={Purchase}/>
+        <Route path="/purchase" component={Purchase}/>
+        <Route path="/signin" component={SignIn}/>
       </div>
     </Router>
   )
