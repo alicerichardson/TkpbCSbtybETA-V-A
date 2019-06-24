@@ -43,9 +43,9 @@ const SignIn = (props) => {
     }
     return(
         <Popup trigger={<button>Sign In</button>} position="left top">
-            <div>
+            <div className="fields">
                 <form>
-                    <p>Username: <input type="text" name="Username" /></p>
+                    <p>Username: <input type="text" className="username" /></p>
                     <p>Password: <input type="text" name="Password" /></p>
                     <br />
                     <p>Stay logged in: <input type="checkbox" name="StaySignedIn" /></p>

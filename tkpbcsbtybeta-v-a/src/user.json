@@ -1,0 +1,8 @@
+        [{
+            "firstname": "Alice",
+            "lastname": "Richardson",
+            "email": "a.richardson@elsevier.com",
+            "birthday": "05/26/1995",
+            "username": "alice",
+            "password": "asd"
+        }]

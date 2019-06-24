@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import './css/purchase.css';
 import NavBar from './NavBar';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
+
 
 const Purchase = (props) => {
     const [adultTickets, setAdultTickets] = useState(0);
@@ -13,7 +15,7 @@ const Purchase = (props) => {
     }
 */
     const calculateTotal = () => {
-        setPriceTotal(((childTickets + adultTickets)*10)+10);
+        setPriceTotal(((childTickets + adultTickets)*10));
     }
 
     const decrementAdultTickets = (event) => {
@@ -43,6 +45,12 @@ const Purchase = (props) => {
         calculateTotal();
     }
 
+    const clear = () =>{
+        setAdultTickets(0);
+        setChildTickets(0);
+        calculateTotal(0);
+    }
+
         return(
             <div>
                 <div>
@@ -51,13 +59,16 @@ const Purchase = (props) => {
                 <div class="row">
                     <div class="column">
                         <div className="purchaseTitle">
-                            <h2>Purchase Tickets for {props.location.state.name} at <br />{props.location.state.time}:</h2>
+                            <h2>Purchase Tickets for {props.location.state.name} at <br />{props.location.state.time}</h2>
                             <p>This movie is rated {props.location.state.rating} and runs for <br /> {props.location.state.runtime} </p>
                         </div>
                         <div className="times">
-                            <p>Select your movie time</p>
+                            <p>Change your movie time</p>
                             <ul class="showtimes1">
-                                {props.location.state.showtimes.map((value, index) => {return <li class="individualTimes" key={index}>{value}</li>})}
+                                {props.location.state.showtimes.map((value, index) => {return <Link to={{pathname:"/purchase", 
+                                    state:{time: value, name: props.location.state.name, rating: props.location.state.rating, 
+                                    runtime: props.location.state.runtime, showtimes: props.location.state.showtimes}}} onClick={clear}>
+                                        <li class="individualTimes" key={index}>{value}</li></Link>})}
                             </ul>
                         </div>
                     </div>

@@ -8,14 +8,6 @@ button:hover{
     color: black;
 }
 
-.signin{
-    float:right;
-}
-
-.signIn{
-    float: right;
-}
-
 html {
     background-color: rgb(212, 195, 228);
 } 
@@ -44,10 +36,28 @@ h1 {
 }
 
 .signupBanner{
-    width: 75%;
+    width: 50%;
     height: auto;
+}
+
+.signupForm input{
+    border-radius: 50px;
+    border: white 4px solid;
+    padding: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
 }
 
 header{
     width:100%;
+}
+
+.row{
+    align-content: center;
+    margin-top: 5%;
+}
+
+.column{
+    float: left;
+    width: 33.33%;
 }

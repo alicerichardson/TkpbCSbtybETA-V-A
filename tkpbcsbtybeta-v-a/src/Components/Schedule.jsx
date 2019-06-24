@@ -4,6 +4,7 @@ import axios from 'axios';
 
 const Schedule = () => {
 
+    
     const [movies, setMovies] = useState([])
     useEffect(() => {
         let getData = async() => {
