@@ -3,11 +3,24 @@
     font-weight: lighter;  
 }
 
-button:hover{
+button:hover {
     background-color: rgb(212, 195, 228);
+    border-color: black;
+    border: 1px solid;
     color: black;
 }
 
+<<<<<<< HEAD
+=======
+.navbar {
+    margin-bottom: 35px;
+}
+
+.signin{
+    float: right;
+}
+
+>>>>>>> 4c0daf749a68478185c9feb13091f7eb6cf08fdd
 html {
     background-color: rgb(212, 195, 228);
 } 
@@ -28,11 +41,6 @@ h1 {
     width: 7%;
     height:auto;
     margin-left: 7px;
-}
-
-.signin{
-    float: right;
-    margin-right: 7px;
 }
 
 .signupBanner{
