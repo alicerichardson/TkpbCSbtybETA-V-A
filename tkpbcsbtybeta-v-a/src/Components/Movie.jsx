@@ -1,6 +1,5 @@
 import React from 'react';
 import './css/movie.css';
-import movieImg from '../movieimg.png';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 const Movie = ({movie}) => {
@@ -9,7 +8,7 @@ const Movie = ({movie}) => {
             <h1>{movie.name}</h1>
             <div class="row">
                 <div class="col leftleft">
-                    <img src={movieImg}></img>
+                    <img src={require('../movieimg.png')}></img>
                 </div>
                 <div class="col left">
                     <h6>{movie.rating}</h6>
