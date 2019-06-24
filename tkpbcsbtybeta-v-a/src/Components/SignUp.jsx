@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import NavBar from './NavBar';
-import signUpTheater from  '../signUpTheater.png';
+import signUpTheater from  '../indy3.png';
 
 const SignUp = (props) => {
 
