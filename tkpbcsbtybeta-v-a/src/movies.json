@@ -4,21 +4,21 @@
 			"name": "Super Happy Movie",
 			"rating": "PG13",
 			"runtime": "3HR 40MIN",
-			"showtimes": ["5:00PM", "3:00PM", "12:00PM"]
+			"showtimes": ["12:00PM", "3:00PM", "5:00PM"]
 		},
 		{
 			"image" : "../movieimg.png",
 			"name": "Great Action Film",
 			"rating": "R",
 			"runtime": "1HR 58MIN",
-			"showtimes": ["3:00PM", "12:00PM"]
+			"showtimes": ["12:00PM", "3:00PM"]
 		},
 		{
 			"image" : "../movieimg.png",
 			"name": "So Much Comedy",
 			"rating": "PG",
 			"runtime": "2HR 08MIN",
-			"showtimes": ["7:00PM", "5:00PM", "3:00PM", "12:00PM"]
+			"showtimes": ["12:00PM", "3:00PM", "5:00PM", "7:00PM"]
 		},
 		{
 			"image" : "../movieimg.png",

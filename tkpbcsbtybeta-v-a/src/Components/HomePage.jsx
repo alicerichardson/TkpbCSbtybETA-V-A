@@ -12,16 +12,18 @@ const HomePage = () => {
     return (
         <div>
             <div className="title">
+                
                 <img class="logo" src={CinemaKey}></img>
                 <div class="signin">
                     <SignIn />
                 </div>
+                <div class="navbar">
+                    <header><NavBar /></header>
+                </div>
                 <h1><Random className="mainTitle" text='TkpbCSbtybETA@V+A' /></h1>
                 <h3>(TheaterKey powered by Clinical Solutions brought to you by Elsevier Tech Associates @ Via + Aries)</h3> 
             </div>
-            <div>
-                <header><NavBar /></header>
-            </div>
+            
             <div classname="schedule">
                 <Schedule />
             </div>
