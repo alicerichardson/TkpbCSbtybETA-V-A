@@ -5,22 +5,29 @@ import NavBar from './NavBar';
 const Purchase = (props) => {
     const [adultTickets, setAdultTickets] = useState(0);
     const [childTickets, setChildTickets] = useState(0);
+    const [priceTotal, setPriceTotal] = useState(0);
 /*
     const handleMovieSelection = (event) => {
         event.preventDefault()
         this.getMovie(movie.name)
     }
 */
+    const calculateTotal = () => {
+        setPriceTotal(((childTickets + adultTickets)*10)+10);
+    }
+
     const decrementAdultTickets = (event) => {
         event.preventDefault()
         if(adultTickets>0){
             setAdultTickets(adultTickets - 1)
         }
+        calculateTotal();
     }
 
     const incrementAdultTickets = (event) => { 
         event.preventDefault()
         setAdultTickets(adultTickets + 1)
+        calculateTotal();
     }
 
     const decrementChildTickets = (event) => {
@@ -28,10 +35,12 @@ const Purchase = (props) => {
         if(childTickets>0){
             setChildTickets(childTickets - 1)
         }
+        calculateTotal();
     }
     const incrementChildTickets = (event) => { 
         event.preventDefault()
         setChildTickets(childTickets + 1)
+        calculateTotal();
     }
 
         return(
@@ -42,8 +51,8 @@ const Purchase = (props) => {
                 <div class="row">
                     <div class="column">
                         <div className="purchaseTitle">
-                            <h2>Purchase Tickets for {props.location.state.name} at {props.location.state.time}:</h2>
-                            <p>This movie is rated {props.location.state.rating} and runs for {props.location.state.runtime} </p>
+                            <h2>Purchase Tickets for {props.location.state.name} at <br />{props.location.state.time}:</h2>
+                            <p>This movie is rated {props.location.state.rating} and runs for <br /> {props.location.state.runtime} </p>
                         </div>
                         <div className="times">
                             <p>Select your movie time</p>
@@ -63,6 +72,7 @@ const Purchase = (props) => {
                                 <button onClick={decrementChildTickets}>-</button>
                                 <button onClick={incrementChildTickets}>+</button>
                             <p></p>
+                            <p>Total: ${priceTotal}</p>
                             </div>
                         </form>
                     </div>

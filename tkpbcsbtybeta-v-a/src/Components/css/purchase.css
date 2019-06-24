@@ -69,3 +69,10 @@ p{
 .submit{
     background-color: cadetblue;
 }
+
+.cardInfo input{
+    border-radius:50px;
+    outline:none;
+    border: white 4px solid;
+    
+}
