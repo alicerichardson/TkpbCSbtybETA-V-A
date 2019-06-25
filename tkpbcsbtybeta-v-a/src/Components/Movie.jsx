@@ -24,7 +24,7 @@ const Movie = ({movie}) => {
                     </ul>
                 </div>
                 <div class="col right">
-                    <Link to={{ pathname:"/purchase", state:{name: movie.name, rating: movie.rating, runtime: movie.runtime} }}><button class ="purchase">Purchase</button></Link>
+                    {/*<Link to={{ pathname:"/purchase", state:{name: movie.name, rating: movie.rating, runtime: movie.runtime, showtimes: movie.showtimes} }}><button class ="purchase">Purchase</button></Link>*/}
                 </div>
             </div>
         </div>
