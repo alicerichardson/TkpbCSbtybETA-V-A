@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './css/purchase.css';
 import NavBar from './NavBar';
-import ConfirmPurchase from './ConfirmPurchase';
+import Popup from "reactjs-popup";
 import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 const Purchase = (props) => {
@@ -97,8 +97,18 @@ const Purchase = (props) => {
                             <p><input type="date" name='Expiration date' placeholder="Expiration Date"></input></p>
                         </div>
                     </form>
-                    <ConfirmPurchase/>
-                    {/* <Link to={{ pathname:"/confirmPurchase", state:{name: movie.name, time: value} }}><button class ="confirmPurchase">Confirm Purchase</button></Link> */}
+                    <Popup trigger={<button class="button"> Submit </button>} modal>
+                    {close => (
+                        <div class="modal">
+                            <div>
+                                <p>Purchase {adultTickets + childTickets} ticket(s) for {props.location.state.name} at {props.location.state.time}?</p>
+                                <h2>Total: ${priceTotal}</h2>
+                            </div>
+                            <button class="confirmButton" onClick={() => {close();}}>Confirm</button>
+                            <button class="cancelButton" onClick={() => {close();}}>Cancel</button>
+                        </div>            
+                    )}
+                    </Popup>
                 </div>
             </div>
         </div>
