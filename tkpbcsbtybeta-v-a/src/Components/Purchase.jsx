@@ -51,7 +51,7 @@ const Purchase = (props) => {
         calculateTotal(0);
     }
 
-    return(
+    return (
         <div>
             <div>
                 <NavBar />
@@ -104,7 +104,7 @@ const Purchase = (props) => {
                                 <p>Purchase {adultTickets + childTickets} ticket(s) for {props.location.state.name} at {props.location.state.time}?</p>
                                 <h2>Total: ${priceTotal}</h2>
                             </div>
-                            <button class="confirmButton" onClick={() => {close();}}>Confirm</button>
+                            <Link to={{pathname:"/ticketconfirmation", state:{time: props.location.state.time, name: props.location.state.name}}}><button class="confirmButton">Confirm</button></Link>
                             <button class="cancelButton" onClick={() => {close();}}>Cancel</button>
                         </div>            
                     )}
