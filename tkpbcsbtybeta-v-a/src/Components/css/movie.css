@@ -8,12 +8,18 @@
     height: 200px;
 }
 
+.row {
+    margin: 20px;
+    width: 100%;
+}
+
 .col {
     float: left;
+    position: relative;
 }
 
 .left, .right {
-    width: 10%;
+    width: 20%;
   }
   
 .center {
