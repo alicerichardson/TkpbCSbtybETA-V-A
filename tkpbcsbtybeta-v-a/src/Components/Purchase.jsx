@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './css/purchase.css';
 import NavBar from './NavBar';
+import ConfirmPurchase from './ConfirmPurchase';
 
 const Purchase = (props) => {
     const [adultTickets, setAdultTickets] = useState(0);
@@ -85,8 +86,8 @@ const Purchase = (props) => {
                                 <p><input type="text" name='CVV' placeholder="CVV"></input></p>
                                 <p><input type="date" name='Expiration date' placeholder="Expiration Date"></input></p>
                             </div>
-                            <button className="submit" type='submit'>Submit</button>
                         </form>
+                        <ConfirmPurchase/>
                     </div>
                 </div>
             </div>

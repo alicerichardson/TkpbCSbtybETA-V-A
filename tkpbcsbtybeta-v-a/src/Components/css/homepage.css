@@ -3,7 +3,7 @@
     font-weight: lighter;  
 }
 
-button:hover {
+.signin:hover {
     background-color: rgb(212, 195, 228);
     border-color: black;
     border: 1px solid;
