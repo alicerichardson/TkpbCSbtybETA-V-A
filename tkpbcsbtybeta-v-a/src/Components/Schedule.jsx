@@ -8,12 +8,12 @@ const Schedule = () => {
     const [movies, setMovies] = useState([])
     useEffect(() => {
         let getData = async() => {
-        let response = await axios.get('http://localhost:3000/movies')
+        let response = await axios.get('http://localhost:3000')
         let movies = await response.data
         setMovies(movies)
     }
     getData()
-    },[])
+    },[]);
     
     return (
         <div>

@@ -1,4 +1,13 @@
 var mongoose = require('mongoose');
+var express = require('express');
+var cors = require('cors');
+
+const API_PORT = 3001;
+const router = express.Router();
+const Movie = require('./movie');
+
+let db = mongoose.connection;
+
 mongoose.connect('mongodb://localhost:27017/theater',{useNewUrlParser: true}, error => {
 	error ? console.log('Connection failed: ${error}') :
 	console.log('Successfully connected to MongoDB');
@@ -43,7 +52,7 @@ app.get('/', (req,res) => {
     res.send('Mongoose finds: '+result);  
 });
 
-const server = app.listen(3000, () => {  
+const server = app.listen(3001, () => {  
     const SERVERHOST = server.address().address;      
     const SERVERPORT = server.address().port;  
     console.log('App listening at http://${SERVERHOST}:${SERVERPORT}');
