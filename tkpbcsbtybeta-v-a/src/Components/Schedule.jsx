@@ -4,11 +4,10 @@ import axios from 'axios';
 
 const Schedule = () => {
 
-    
     const [movies, setMovies] = useState([])
     useEffect(() => {
         let getData = async() => {
-        let response = await axios.get('http://localhost:3000')
+        let response = await axios.get('http://localhost:3000/movies')
         let movies = await response.data
         setMovies(movies)
     }

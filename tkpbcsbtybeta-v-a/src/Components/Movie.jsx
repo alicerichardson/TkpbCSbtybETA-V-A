@@ -13,7 +13,6 @@ const Movie = ({movie}) => {
                 <div class="col left">
                     <h6>{movie.rating}</h6>
                     <h6>{movie.runtime}</h6>
-                    <h6 class="info">More Info</h6>
                 </div>
                 <div class="col center">
                     <ul>

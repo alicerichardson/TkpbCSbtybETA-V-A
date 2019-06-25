@@ -63,12 +63,6 @@ h6 {
     cursor: pointer;
 }
 
-.info {
-    cursor: pointer;
-    color: rgb(56, 18, 56);
-    text-decoration: underline;
-}
-
 img {
     width: 10%;
     height: auto;

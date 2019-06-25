@@ -3,19 +3,23 @@
     font-weight: lighter;  
 }
 
-.signin:hover {
-    background-color: rgb(212, 195, 228);
-    border-color: black;
-    border: 1px solid;
+.signin button {
+    float: right;
+    background-color: white;  
+    border: 4px solid rgb(212, 195, 228);
+    border-radius: 100px;
+    padding: 10px 24px;
     color: black;
+    cursor: pointer;
+}
+
+.signin button:hover {
+    background-color: rgb(112, 58, 112);
+    color: white;
 }
 
 .navbar {
     margin-bottom: 35px;
-}
-
-.signin{
-    float: right;
 }
 
 html {

@@ -1,0 +1,31 @@
+* {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;  
+}
+
+.button,
+.confirmButton,
+.cancelButton {
+    background-color: white; 
+    border: 4px solid rgb(212, 195, 228); 
+    border-radius: 100px;
+    color: black;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 24px;
+}
+
+.button:hover,
+.confirmButton:hover,
+.cancelButton:hover {
+    background-color: rgb(112, 58, 112);
+    border-color: rgb(112, 58, 112);;
+    color: white;
+}
+
+.confirmButton,
+.cancelButton {
+    margin: 20px;
+    border: 2px solid rgb(112, 58, 112);;
+
+}
