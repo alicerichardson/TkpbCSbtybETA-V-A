@@ -6,6 +6,7 @@ import SignUp from './Components/SignUp';
 import Info from './Components/Info';
 import Purchase from './Components/Purchase';
 import SignIn from './Components/SignIn';
+import TicketConfirmation from './Components/TicketConfirmation';
 
 function App() {
   const routing = (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/contact" component={Info}/>
         <Route path="/purchase" component={Purchase}/>
         <Route path="/signin" component={SignIn}/>
+        <Route path="/ticketconfirmation" component={TicketConfirmation}/>
       </div>
     </Router>
   )
