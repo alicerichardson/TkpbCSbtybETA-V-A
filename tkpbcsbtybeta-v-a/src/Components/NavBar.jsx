@@ -8,7 +8,7 @@ const NavBar = () => {
             <div className="btn-group">
                 <Link to="/"><button className="navBtn">Home</button></Link>
                 <Link to="/signup"><button className="navBtn">Sign Up</button></Link>
-                <button className="navBtn">Concessions</button>
+                <Link to="/concessions"><button className="navBtn">Concessions</button></Link>
                 <button className="navBtn">Accessibility</button>
                 <Link to="/contact"><button className="navBtn">Contact Info</button></Link>
             </div>

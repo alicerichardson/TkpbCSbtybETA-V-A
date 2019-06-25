@@ -7,6 +7,7 @@ import Info from './Components/Info';
 import Purchase from './Components/Purchase';
 import SignIn from './Components/SignIn';
 import TicketConfirmation from './Components/TicketConfirmation';
+import Concession from './Components/Concession';
 
 function App() {
   const routing = (
@@ -14,6 +15,7 @@ function App() {
       <div className="container">
         <Route path="/" component={HomePage} exact/>
         <Route path="/signup" component={SignUp}/>
+        <Route path="/concessions" component={Concession}/>
         <Route path="/contact" component={Info}/>
         <Route path="/purchase" component={Purchase}/>
         <Route path="/signin" component={SignIn}/>
