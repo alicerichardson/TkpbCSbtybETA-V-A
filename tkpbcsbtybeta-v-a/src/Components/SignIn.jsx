@@ -18,7 +18,7 @@ const SignIn = (props) => {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const user = useState('')
+    const user = props.user;
 
     const handleUsernameChange = (event) => {
         setUsername([event.target.value])
@@ -27,9 +27,7 @@ const SignIn = (props) => {
         setPassword([event.target.value])
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        console.log(users);
+    const signIn = (username) => {
         if(users.includes(username)){
             user = users.filter(user => user.username === username );
             console.log(user.username);
@@ -42,17 +40,19 @@ const SignIn = (props) => {
         console.log("false");
     }
     return(
+        <div>
         <Popup trigger={<button>Sign In</button>} position="left top">
             <div className="fields">
                 <form>
-                    <p>Username: <input type="text" className="username" /></p>
-                    <p>Password: <input type="text" name="Password" /></p>
+                    <p>Username: <input type="text" className="username" value={username} onChange={handleUsernameChange} /></p>
+                    <p>Password: <input type="text" className="password" value={password} onChange={handlePasswordChange} /></p>
                     <br />
                     <p>Stay logged in: <input type="checkbox" name="StaySignedIn" /></p>
-                    <p><input type="submit" value="Sign-in" /></p>
+                    <button onClick={() => props.signIn(user)}>Sign In</button>
                 </form>
             </div>
         </Popup>
+        </div>
     )
 
 }
