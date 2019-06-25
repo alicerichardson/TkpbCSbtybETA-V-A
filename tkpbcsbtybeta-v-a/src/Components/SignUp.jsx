@@ -8,6 +8,8 @@ const SignUp = (props) => {
     const [LastName, setLastName] = useState('')
     const [Email, setEmail] = useState('')
     const [Birthday, setBirthday] = useState('')
+    const [Username, setUsername] = useState('')
+    const [Password, setPassword] = useState('')
     
     const handleFirstNameChange = (event) => {
         setFirstName([event.target.value])
@@ -21,14 +23,21 @@ const SignUp = (props) => {
     const handleBirthdayChange = (event) => {
         setBirthday([event.target.value])
     }
+    const handleUsernameChange = (event) => {
+        setUsername([event.target.value])
+    }
+    const handlePasswordChange = (event) => {
+        setPassword([event.target.value])
+    }
+
     const handleSubmit = (event) => {
-        //alert(`${FirstName} ${LastName} ${Email} ${Birthday}`)
         event.preventDefault()
         props.submitFirstName(FirstName)
         props.submitLastName(LastName)
         props.submitEmail(Email)
         props.submitBirthday(Birthday)
-
+        props.submitUsername(Username)
+        props.submitPassword(Password)
     }
 
     return (
@@ -41,12 +50,20 @@ const SignUp = (props) => {
             <div class="row">
             <div class="col-left">
             <div>
+                <label>Username: </label>
+                <input type="text" className='Username' value={Username} onChange={handleUsernameChange}></input>
+            </div>
+            <div>
+                <label>Password: </label>
+                <input type="text" className='Password' value={Password} onChange={handlePasswordChange}></input>
+            </div>
+            <div>
                 <label>Firstname: </label>
-                <input type="text" name='FirstName' value={FirstName} onChange={handleFirstNameChange}></input>
+                <input type="text" className='FirstName' value={FirstName} onChange={handleFirstNameChange}></input>
             </div>
             <div>
                 <label>Lastname: </label>
-                <input type="text" name='LastName' value={LastName} onChange={handleLastNameChange}></input>
+                <input type="text" className='LastName' value={LastName} onChange={handleLastNameChange}></input>
             </div>
             </div>
             <div class="col-right">

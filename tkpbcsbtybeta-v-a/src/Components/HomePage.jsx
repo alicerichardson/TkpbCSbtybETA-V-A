@@ -1,21 +1,32 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import NavBar from './NavBar';
 import Schedule from './Schedule';
 import Info from './Info';
 import './css/homepage.css';
-import { Wave, Random } from 'react-animated-text';
+import { Random } from 'react-animated-text';
 import CinemaKey from '../CinemaKey.jpg';
 import SignIn from './SignIn';
 
-
 const HomePage = () => {
+
+    const[username, setUsername] = useState('')
+    const[loggedIn, setLoggedIn] = useState(false)
+
+    const signIn = (username) => {
+        console.log(username)
+        setUsername(username)
+        setLoggedIn(true)
+    }
+
     return (
         <div>
             <div className="title">
-                
                 <img class="logo" src={CinemaKey}></img>
-                <div class="signin">
-                    <SignIn />
+                <div className="signin">
+                    <SignIn signIn={signIn}/>
+                    <div>
+                        {loggedIn && ( <div><p>Welcome {username}</p></div>)}
+                    </div>
                 </div>
                 <div class="navbar">
                     <header><NavBar /></header>
@@ -23,8 +34,7 @@ const HomePage = () => {
                 <h1><Random className="mainTitle" text='TkpbCSbtybETA@V+A' /></h1>
                 <h3>(TheaterKey powered by Clinical Solutions brought to you by Elsevier Tech Associates @ Via + Aries)</h3> 
             </div>
-            
-            <div classname="schedule">
+            <div className="schedule">
                 <Schedule />
             </div>
             <div className="footer">

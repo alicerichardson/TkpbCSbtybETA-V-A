@@ -3,5 +3,7 @@
     height: auto;
 }
 
-
+input{
+    outline: none;
+}
 
