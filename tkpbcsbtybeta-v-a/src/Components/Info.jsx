@@ -10,7 +10,7 @@ const Info = () => {
             <div>
                 <NavBar/>
             </div>
-            <p className="hours">Theater Hours: 9:00AM - 11:00 PM Mon - Sat</p>
+            <p className="hours">Theater Hours: 9:00AM - 11:00PM Mon - Sat</p>
             <div className="socials">
                 <SocialIcon network="twitter" class="tw"/>
                 <SocialIcon network="instagram"/>

@@ -1,4 +1,4 @@
-.btn-group button {
+.btn-group .navBtn {
     background-color: rgb(212, 195, 228); 
     border: 4px solid rgb(212, 195, 228); 
     color: white;
@@ -11,19 +11,19 @@
     outline: none;
 }
 
-.btn-group button:link,
-.btn-group button:hover {
+.btn-group .navBtn:link,
+.btn-group .navBtn:hover {
     border: 4px solid rgb(212, 195, 228); 
     color: rgb(56, 18, 56);
 }
 
-.btn-group button:active{
+.btn-group .navBtn:active{
     position: relative;
     top:2px;
     border: 4px solid rgb(212, 195, 228); 
 }
 
-.btn-group {
+.btn-group .navBtn {
     align-content: center;
     border: 4px solid rbg(205, 178, 231);
     display: fixed;
