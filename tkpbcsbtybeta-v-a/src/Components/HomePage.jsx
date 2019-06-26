@@ -7,8 +7,6 @@ import { Random } from 'react-animated-text';
 import CinemaKey from '../CinemaKey.jpg';
 import SignIn from './SignIn';
 import CustomInput from './SelectDate';
-import DatePicker from "react-datepicker";
-
 
 const HomePage = () => {
 
@@ -43,7 +41,7 @@ const HomePage = () => {
                 <h3>(TheaterKey powered by Clinical Solutions brought to you by Elsevier Tech Associates @ Via + Aries)</h3> 
             </div>
             <div className="selectdate">
-                <h4>Movies Plaing On:</h4>
+                <h4>Movies Playing On:</h4>
                 <CustomInput />
                 {/* Movies Playing On: <DatePicker>selected={startDate} onChange={handleChange}</DatePicker> */}
             </div>
