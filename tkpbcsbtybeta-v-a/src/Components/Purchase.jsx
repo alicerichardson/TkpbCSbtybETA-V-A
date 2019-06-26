@@ -97,32 +97,6 @@ const Purchase = (props) => {
                             <p><input type="date" name='Expiration date' placeholder="Expiration Date"></input></p>
                         </div>
                     </form>
-                    <div class = "column">
-                        <form>
-                            <div class="tickets">
-                            <p>Select number of adult tickets: {adultTickets}</p>
-                                <button onClick={decrementAdultTickets}>-</button>
-                                <button onClick={incrementAdultTickets}>+</button>
-                            
-                            <p>Select number of child tickets: {childTickets}</p>
-                                <button onClick={decrementChildTickets}>-</button>
-                                <button onClick={incrementChildTickets}>+</button>
-                            <p></p>
-                            <p>Total: ${priceTotal}</p>
-                            </div>
-                        </form>
-                    </div>
-                    <div class = "column">
-                        <form>
-                            <div className="cardInfo">
-                                <p>Enter your card information</p>
-                                <p><input type="text" className='Cardholder name' placeholder="Cardholder name"></input></p>
-                                <p><input type="text" className='Card number' placeholder="Card number"></input></p>
-                                <p><input type="text" className='CVV' placeholder="CVV"></input></p>
-                                <p><input type="date" className='Expiration date' placeholderText="Expiration Date"></input></p>
-                            </div>
-                        </form>
-                    </div>
                     <Popup trigger={<button class="button"> Submit </button>} modal>
                     {close => (
                         <div class="modal">
