@@ -7,12 +7,18 @@ import { Random } from 'react-animated-text';
 import CinemaKey from '../CinemaKey.jpg';
 import SignIn from './SignIn';
 import CustomInput from './SelectDate';
+import DatePicker from "react-datepicker";
 
 
 const HomePage = () => {
 
     const[username, setUsername] = useState('')
     const[loggedIn, setLoggedIn] = useState(false)
+    const[startDate, setStartDate] = useState(new Date())
+  
+    const handleChange = (date) => {
+        setStartDate(date)
+    };
 
     const signIn = (username) => {
         console.log(username)
@@ -27,7 +33,7 @@ const HomePage = () => {
                 <div className="signin">
                     <SignIn username={'alice'}/>
                     <div>
-                        {loggedIn && ( <div><p>Welcome {username}</p></div>)}
+                        {loggedIn && (<div><p>Welcome {username}</p></div>)}
                     </div>
                 </div>
                 <div class="navbar">
@@ -37,9 +43,8 @@ const HomePage = () => {
                 <h3>(TheaterKey powered by Clinical Solutions brought to you by Elsevier Tech Associates @ Via + Aries)</h3> 
             </div>
             <div className="selectdate">
-                <p>
-                Movies Playing On: <CustomInput />
-                </p>
+                <p>Movies Playing On: <CustomInput /></p>
+                {/* Movies Playing On: <DatePicker>selected={startDate} onChange={handleChange}</DatePicker> */}
             </div>
             <div className="schedule">
                 <Schedule />

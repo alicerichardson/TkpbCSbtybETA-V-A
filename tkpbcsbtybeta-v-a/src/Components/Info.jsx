@@ -11,8 +11,9 @@ const Info = () => {
                 <NavBar/>
             </div>
             <p className="hours">Theater Hours: 9:00AM - 11:00PM Mon - Sat</p>
+            <p className="phone">Phone: 111-111-1111</p>
             <div className="socials">
-                <SocialIcon network="twitter" class="tw"/>
+                <SocialIcon network="twitter"/>
                 <SocialIcon network="instagram"/>
                 <SocialIcon network="facebook"/>
                 <SocialIcon network="snapchat"/>

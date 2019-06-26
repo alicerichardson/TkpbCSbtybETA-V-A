@@ -34,9 +34,7 @@ export default class CustomInput extends React.Component {
   };
 
   render() {
-    return (
-
-            
+    return (   
         <div className="column">
           <DatePicker
             customInput={<ExampleCustomInput />}
@@ -44,7 +42,6 @@ export default class CustomInput extends React.Component {
             onChange={this.handleChange}
           />
         </div>
-
     );
   }
 }

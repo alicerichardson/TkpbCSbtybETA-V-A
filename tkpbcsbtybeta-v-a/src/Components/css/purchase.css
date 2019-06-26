@@ -93,7 +93,8 @@ p {
     background-color: cadetblue;
 }
 
-.cardInfo input{
+.cardInfo input,
+.email input{
     width: 80%;
     border-radius: 50px;
     text-align: left;

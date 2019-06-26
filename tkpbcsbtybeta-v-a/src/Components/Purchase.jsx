@@ -8,14 +8,24 @@ const Purchase = (props) => {
     const [adultTickets, setAdultTickets] = useState(0);
     const [childTickets, setChildTickets] = useState(0);
     const [priceTotal, setPriceTotal] = useState(0);
-/*
-    const handleMovieSelection = (event) => {
-        event.preventDefault()
-        this.getMovie(movie.name)
+    const [email, setEmail] = useState('')
+
+    const handleEmailChange = (event) => {
+        setEmail([event.target.value])
     }
-*/
+
+    const handleCardChange = (event) => {
+        calculateTotal();
+    }
+
     const calculateTotal = () => {
-        setPriceTotal(((childTickets + adultTickets)*10));
+        console.log('herere')
+        if(email[0].includes("@elsevier.com")){
+            setPriceTotal(((childTickets*4) + (adultTickets*8)));
+        }
+        else{
+            setPriceTotal(((childTickets*6) + (adultTickets*10)));
+        }
     }
 
     const decrementAdultTickets = (event) => {
@@ -23,13 +33,11 @@ const Purchase = (props) => {
         if(adultTickets > 0){
             setAdultTickets(adultTickets - 1)
         }
-        calculateTotal();
     }
 
     const incrementAdultTickets = (event) => { 
         event.preventDefault()
         setAdultTickets(adultTickets + 1)
-        calculateTotal();
     }
 
     const decrementChildTickets = (event) => {
@@ -37,12 +45,10 @@ const Purchase = (props) => {
         if(childTickets > 0) {
             setChildTickets(childTickets - 1)
         }
-        calculateTotal();
     }
     const incrementChildTickets = (event) => { 
         event.preventDefault()
         setChildTickets(childTickets + 1)
-        calculateTotal();
     }
 
     const clear = () =>{
@@ -83,28 +89,34 @@ const Purchase = (props) => {
                             <button class="ticketBtn" onClick={decrementChildTickets}>-</button>
                             <button class="ticketBtn" onClick={incrementChildTickets}>+</button>
                         <p></p>
-                        <p>Total: ${priceTotal}</p>
+                        <p>Adult Tickets: $10
+                            Child Tickets: $8
+                        </p>
                         </div>
                     </form>
                 </div>
                 <div class = "column">
                     <form>
+                        <div className="email">
+                            <p>Enter Email</p>
+                            <p><input type="text" name='Email' placeholder="Email" value={email} onChange={handleEmailChange}></input></p>
+                        </div>
                         <div className="cardInfo">
                             <p>Enter Card Information</p>
-                            <p><input type="text" name='Cardholder name' placeholder="Cardholder name"></input></p>
+                            <p><input type="text" name='Cardholder name' placeholder="Cardholder name" onChange={handleCardChange}></input></p>
                             <p><input type="text" name='Card number' placeholder="Card number"></input></p>
                             <p><input type="text" name='CVV' placeholder="CVV"></input></p>
                             <p><input type="date" name='Expiration date' placeholder="Expiration Date"></input></p>
                         </div>
                     </form>
-                    <Popup trigger={<button class="button"> Submit </button>} modal>
+                    <Popup trigger={<button class="button"> Submit </button> } modal>
                     {close => (
                         <div class="modal">
                             <div>
                                 <p>Purchase {adultTickets + childTickets} ticket(s) for {props.location.state.name} at {props.location.state.time}?</p>
                                 <h2>Total: ${priceTotal}</h2>
                             </div>
-                            <Link to={{pathname:"/ticketconfirmation", state:{time: props.location.state.time, name: props.location.state.name}}}><button class="confirmButton">Confirm</button></Link>
+                            <Link to={{pathname:"/ticketconfirmation", state:{time: props.location.state.time, name: props.location.state.name, email: props.location.state.email}}}><button class="confirmButton">Confirm</button></Link>
                             <button class="cancelButton" onClick={() => {close();}}>Cancel</button>
                         </div>            
                     )}

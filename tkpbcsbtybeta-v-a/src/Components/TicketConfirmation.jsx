@@ -8,7 +8,7 @@ const TicketConfirmation = (props) => {
        <div>
             <NavBar/>
             <h2>Thank You for Your Purchase</h2>
-            <h4>Your pass for all tickets can be printed from below. You have also been sent a confirmation email.</h4>
+            <h4>Your pass for all tickets can be printed from below. You have also been sent a confirmation email at {props.location.state.email}.</h4>
             <div class="ticket">
                 <h2>{props.location.state.name}</h2>
                 <h3>{props.location.state.time}</h3>

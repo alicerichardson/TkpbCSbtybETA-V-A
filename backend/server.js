@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var express = require('express');
 var cors = require('cors');
+const bodyParser = require('body-parser');
 let app = express();
 var Int32 = require('mongoose-int32');
 
@@ -10,9 +11,9 @@ mongoose.connect('mongodb://localhost:27017/theater',{useNewUrlParser: true}, er
 });
 
 var router = express.Router();
+router.use(bodyParser.json());
 app.use(cors({
-	origin: "http://localhost:3001",
-	credentials: true
+	origin: "http://localhost:3001"
 }
 ));
 app.use('/movie', router);
@@ -42,8 +43,6 @@ queryAllMovies.exec(function (err,movies) {
 		return handleError(err);
 	else {
 		allMovies = movies;
-		//console.log('%s %s %s.', allMovies[0].name, allMovies[0].rating, allMovies[0].runtime, allMovies[0].showtimes, allMovies[0].tickets);
-		console.log('%s %s', allMovies.length, allMovies[0].name);
 	}
 });
 
@@ -53,7 +52,6 @@ querySingleMovie.exec(function (err,movie) {
 	if (err) 
 		return handleError(err);
 	else {
-		console.log('%s %s %s.', movie.name, movie.rating, movie.runtime, movie.showtimes, movie.tickets);
 		oneMovie = movie;
 	}
 });
@@ -63,7 +61,6 @@ app.get('/movie', (req, res) => {
 			if(!movies) {res.json({message:'No movies'});
 			return;
 		} else {
-			console.log('got movies');
 			res.json({movies});
 			return;
 		}
@@ -107,10 +104,11 @@ app.get('/users/:username', (req, res) => {
 	})
 })
 
-app.post('/users', (req, res) => {
+app.post('/users/addUser', (req, res) => {
+	console.log('post: ' + req.body)
 	User.create(req.body, (err, result) => {
 		if (err) 
-			return handleError(err);
+			console.log(err.message);
 		else
 			console.log('successfully added new user')
 	})
@@ -127,7 +125,6 @@ querySingleUser.exec(function (err, user) {
 	}
 	else{
 		oneUser = user;
-		console.log('%s %s', oneUser.username, oneUser.elsEmployee)
 	}
 })
 
@@ -137,7 +134,6 @@ queryAllUsers.exec(function (err, users) {
 		return handleError(err)
 	} else{
 		allUsers = users;
-		console.log('%s %s', allUsers.length, allUsers[0].email)
 	}
 })
 
