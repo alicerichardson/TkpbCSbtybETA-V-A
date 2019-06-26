@@ -6,6 +6,8 @@ import './css/homepage.css';
 import { Random } from 'react-animated-text';
 import CinemaKey from '../CinemaKey.jpg';
 import SignIn from './SignIn';
+import CustomInput from './SelectDate';
+
 
 const HomePage = () => {
 
@@ -34,9 +36,14 @@ const HomePage = () => {
                 <h1><Random className="mainTitle" text='TkpbCSbtybETA@V+A' /></h1>
                 <h3>(TheaterKey powered by Clinical Solutions brought to you by Elsevier Tech Associates @ Via + Aries)</h3> 
             </div>
+            <div className="selectdate">
+                <p>
+                Movies Playing On: <CustomInput />
+                </p>
+            </div>
             <div className="schedule">
                 <Schedule />
-            </div>
+            </div> 
             <div className="footer">
                 <footer><Info /></footer>
             </div>
