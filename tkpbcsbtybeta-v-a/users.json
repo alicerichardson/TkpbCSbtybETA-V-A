@@ -5,20 +5,22 @@
             "lastname": "Richardson",
             "email": "a.richardson@elsevier.com",
             "birthday": "05/26/1995",
-            "username": "alice"
+            "username": "alice",
+            "password": "test"
         },
         {
             "firstname": "Emily",
             "lastname": "Ebling",
             "email": "e.ebling@elsevier.com",
             "birthday": "01/01/1997",
-	    "username": "emily"
+            "username": "emily"
         },
         {
             "firstname": "Gerry",
             "lastname": "Bella Jr",
             "email": "g.bella@elsevier.com",
-            "birthday": "01/01/1995"
+            "birthday": "01/01/1995",
+		"username": "gerry"
         }
     ]
 }
