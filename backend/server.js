@@ -93,11 +93,14 @@ app.get('/users', (req, res) => {
 });
 
 app.get('/users/:username', (req, res) => {
-	var query = User.find({'username':req.params.username}).then(user => {
+	const param = req.params.username
+	var query = User.findOne({'username':param}).then(user => {
 		if(!user){ 
+			console.log('user not found')
 			res.json('User not found'); 
 			return;
 		} else {
+			console.log('user found')
 			res.json({user}); 
 			return;
 		}

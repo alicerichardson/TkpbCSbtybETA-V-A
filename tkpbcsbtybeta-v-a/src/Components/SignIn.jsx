@@ -29,7 +29,6 @@ const SignIn = (props) => {
     }
 
     function signIn (username) {
-        console.log('username: ' + username);
         user = users.filter(user => user.username === username);
         console.log(user.username);
         console.log(user.password);
