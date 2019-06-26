@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import DatePicker from "react-datepicker";
+import './css/selectdate.css';
 import 'react-datepicker/dist/react-datepicker.css';
 
 /* eslint-disable react/no-multi-comp */
@@ -12,7 +13,7 @@ class ExampleCustomInput extends React.Component {
 
   render() {
     return (
-      <button className="example-custom-input" onClick={this.props.onClick}>
+      <button className="btn" onClick={this.props.onClick}>
         {this.props.value}
       </button>
     );
