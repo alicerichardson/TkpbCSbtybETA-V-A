@@ -3,7 +3,10 @@ import NavBar from './NavBar';
 
 const Concession = () => { 
     return (
-        <h1>Popcorn</h1>
+        <div>
+            <NavBar/> 
+            <h1>Popcorn</h1>
+        </div>
     );
 }
 

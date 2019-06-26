@@ -34,7 +34,7 @@ const Purchase = (props) => {
 
     const decrementChildTickets = (event) => {
         event.preventDefault()
-        if(childTickets > 0){
+        if(childTickets > 0) {
             setChildTickets(childTickets - 1)
         }
         calculateTotal();
