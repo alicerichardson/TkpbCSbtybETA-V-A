@@ -1,0 +1,26 @@
+* {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;  
+}
+
+.form input {
+    padding: 7px;
+    margin: 10px;
+    border-radius: 50px;
+    outline: none;
+    background-color: white;
+    border: transparent;
+    border: 1px solid rgb(112, 58, 112);
+}
+
+.form input[type="submit"] {
+    cursor: pointer;
+    width: 80%;
+    background-color: rgb(112, 58, 112);
+    color: white;
+}
+
+.form input[type="submit"]:hover {
+    background-color: rgb(212, 195, 228);
+    color: black;
+}

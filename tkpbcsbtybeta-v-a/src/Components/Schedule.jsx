@@ -10,7 +10,6 @@ const Schedule = () => {
         let response = await axios.get('http://localhost:3000/movie')
         let movies = await response.data
         setMovies(movies.movies)
-        console.log(movies)
     }
     getData()
     },[]);

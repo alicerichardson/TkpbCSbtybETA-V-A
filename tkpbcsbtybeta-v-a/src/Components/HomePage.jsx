@@ -43,7 +43,8 @@ const HomePage = () => {
                 <h3>(TheaterKey powered by Clinical Solutions brought to you by Elsevier Tech Associates @ Via + Aries)</h3> 
             </div>
             <div className="selectdate">
-                <p>Movies Playing On: <CustomInput /></p>
+                <h4>Movies Plaing On:</h4>
+                <CustomInput />
                 {/* Movies Playing On: <DatePicker>selected={startDate} onChange={handleChange}</DatePicker> */}
             </div>
             <div className="schedule">
