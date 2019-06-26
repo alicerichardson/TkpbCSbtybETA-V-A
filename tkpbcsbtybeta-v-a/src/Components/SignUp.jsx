@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 import NavBar from './NavBar';
 import signUpTheater from  '../indy3.png';
 import axios from 'axios';
-import PropTypes from "prop-types";
 import './css/signup.css';
+import Popup from "reactjs-popup";
+
 
 const SignUp = (props) => {
 
@@ -13,7 +15,8 @@ const SignUp = (props) => {
     const [Birthday, setBirthday] = useState('')
     const [Username, setUsername] = useState('')
     const [Password, setPassword] = useState('')
-    const [elsEmployee, setElsEmployee] = useState(false)
+    const [uniqueUser, setUniqueUser] = useState(true)
+    const [currentUserName, setCurrentUsername] = useState('')
     
     const handleFirstNameChange = (event) => {
         setFirstName([event.target.value])
@@ -27,8 +30,28 @@ const SignUp = (props) => {
     const handleBirthdayChange = (event) => {
         setBirthday([event.target.value])
     }
+
+
+
     const handleUsernameChange = (event) => {
         setUsername([event.target.value])
+        console.log('hererere')
+        axios.get("http://localhost:3000/users/"+Username)
+            .then(function (response) {
+            console.log('res: ' + response.data)
+            setCurrentUsername(response.data);
+          })
+          .catch(function (error) {
+            console.log('err: ' + error);
+        })
+        
+        if(currentUserName === 'User not found'){
+            setUniqueUser(true)}
+         else{ 
+             setUniqueUser(false) 
+        }
+            
+        console.log(uniqueUser)
     }
     const handlePasswordChange = (event) => {
         setPassword([event.target.value])
@@ -36,8 +59,7 @@ const SignUp = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        const createUser =() => {
-            const newUser = {
+        const newUser = {
             "username": Username[0],
             "password": Password[0],
             "firstname": FirstName[0],
@@ -52,12 +74,7 @@ const SignUp = (props) => {
           .catch(function (error) {
             console.log('err: ' + error);
         })
-    }
         console.log('adding new user');
-        if(Email[0].includes("@elsevier.com")){
-            console.log('here')
-            setElsEmployee(true, createUser)
-        }
     }
 
     return (
@@ -72,6 +89,7 @@ const SignUp = (props) => {
                     <div>
                         <label>Username: </label>
                         <input type="text" className='Username' value={Username} onChange={handleUsernameChange}></input>
+                        {uniqueUser ? <div></div> : <div>Username already in use!</div> }
                     </div>
                     <div>
                         <label>Password: </label>
@@ -100,9 +118,16 @@ const SignUp = (props) => {
                 </div>
             </div>
             <div>
-                <p>
-                    <button type='submit'>Sign Up!</button>
-                </p>
+            <Popup trigger={<button type='submit' class="button"> Sign Up! </button> } modal>
+                {close => (
+                        <div class="modal">
+                            <div>
+                                <p>Thanks for signing up!</p>
+                            </div>
+                        <Link to="/"><button class="cancelButton" onClick={() => {close();}}>Close</button></Link>       
+                        </div>    
+                    )}
+            </Popup>
             </div>
         </form>
     </div>

@@ -54,7 +54,6 @@ const Purchase = (props) => {
     const clear = () =>{
         setAdultTickets(0);
         setChildTickets(0);
-        calculateTotal(0);
     }
 
     return (
@@ -106,7 +105,7 @@ const Purchase = (props) => {
                             <p><input type="text" name='Cardholder name' placeholder="Cardholder name" onChange={handleCardChange}></input></p>
                             <p><input type="text" name='Card number' placeholder="Card number"></input></p>
                             <p><input type="text" name='CVV' placeholder="CVV"></input></p>
-                            <p><input type="date" name='Expiration date' placeholder="Expiration Date"></input></p>
+                            <p><input type="text" name='Expiration date' placeholder="Expiration (MM/YY)"></input></p>
                         </div>
                     </form>
                     <Popup trigger={<button class="button"> Submit </button> } modal>
@@ -116,7 +115,7 @@ const Purchase = (props) => {
                                 <p>Purchase {adultTickets + childTickets} ticket(s) for {props.location.state.name} at {props.location.state.time}?</p>
                                 <h2>Total: ${priceTotal}</h2>
                             </div>
-                            <Link to={{pathname:"/ticketconfirmation", state:{time: props.location.state.time, name: props.location.state.name, email: props.location.state.email}}}><button class="confirmButton">Confirm</button></Link>
+                            <Link to={{pathname:"/ticketconfirmation", state:{time: props.location.state.time, name: props.location.state.name, email: email}}}><button class="confirmButton">Confirm</button></Link>
                             <button class="cancelButton" onClick={() => {close();}}>Cancel</button>
                         </div>            
                     )}

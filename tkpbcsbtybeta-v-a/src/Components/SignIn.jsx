@@ -27,6 +27,22 @@ const SignIn = (props) => {
         setPassword([event.target.value])
     }
 
+<<<<<<< HEAD
+    function signIn (username) {
+        user = users.filter(user => user.username === username);
+        console.log(user.username);
+        console.log(user.password);
+            if(user.password === password){
+                console.log("true");
+                setLoggedIn(true);
+                return;
+            }
+        
+        console.log("false");
+    }
+
+=======
+>>>>>>> 51621e9ff0f85582006bb29a813006a134f56e03
     return(
         <div>
         <Popup trigger={<button>Sign In</button>} position="left top">

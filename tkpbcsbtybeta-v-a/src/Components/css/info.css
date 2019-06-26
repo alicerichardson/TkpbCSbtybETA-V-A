@@ -1,4 +1,14 @@
+<<<<<<< HEAD
+
+.hours {
+    border-color:black;
+=======
 .hours,
+.phone {
+>>>>>>> 51621e9ff0f85582006bb29a813006a134f56e03
+    color: white;
+}
+
 .phone {
     color: white;
 }

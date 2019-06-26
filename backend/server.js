@@ -86,27 +86,29 @@ var userSchema = new mongoose.Schema(
 var User = mongoose.model('User', userSchema);
 module.exports = mongoose.model('User', userSchema);
 
-// app.get('/users', (req, res) => {
-// 	var query = User.find({}).then(users => {
-// 		if(!users){ 
-// 			res.json({message: 'No users'});
-// 			return;
-// 		} else { res.json({users}); return; }
-// 	});
-// });
+app.get('/users', (req, res) => {
+	var query = User.find({}).then(users => {
+		if(!users){ 
+			res.json({message: 'No users'});
+			return;
+		} else { res.json({users}); return; }
+	});
+});
 
-// app.get('/users/:username', (req, res) => {
-// 	var query = User.findOne({'username':req.params.username}).then(user => {
-// 		if(!user){ 
-// 			res.json('User not found'); 
-// 			return;
-// 		} else {
-// 			console.log("test");
-// 			res.json({user}); 
-// 			return;
-// 		}
-// 	})
-// })
+app.get('/users/:username', (req, res) => {
+	const param = req.params.username
+	var query = User.findOne({'username':param}).then(user => {
+		if(!user){ 
+			console.log('user not found')
+			res.json('User not found'); 
+			return;
+		} else {
+			console.log('user found')
+			res.json({user}); 
+			return;
+		}
+	})
+})
 
 app.post('/users', (req, res) => {
 	User.create(req.body, (err, result) => {
