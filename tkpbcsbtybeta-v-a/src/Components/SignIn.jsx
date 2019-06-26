@@ -9,6 +9,7 @@ const SignIn = (props) => {
     const [loggedIn, setLoggedIn] = useState(false)
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    var user
 
     useEffect(() => {
         let getData = async() => {
@@ -27,7 +28,6 @@ const SignIn = (props) => {
         setPassword([event.target.value])
     }
 
-<<<<<<< HEAD
     function signIn (username) {
         user = users.filter(user => user.username === username);
         console.log(user.username);
@@ -41,8 +41,6 @@ const SignIn = (props) => {
         console.log("false");
     }
 
-=======
->>>>>>> 51621e9ff0f85582006bb29a813006a134f56e03
     return(
         <div>
         <Popup trigger={<button>Sign In</button>} position="left top">
