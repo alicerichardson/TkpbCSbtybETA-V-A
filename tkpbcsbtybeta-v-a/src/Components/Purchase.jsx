@@ -91,10 +91,10 @@ const Purchase = (props) => {
                         <form>
                             <div className="cardInfo">
                                 <p>Enter your card information</p>
-                                <p><input type="text" name='Cardholder name' placeholder="Cardholder name"></input></p>
-                                <p><input type="text" name='Card number' placeholder="Card number"></input></p>
-                                <p><input type="text" name='CVV' placeholder="CVV"></input></p>
-                                <p><input type="date" name='Expiration date' placeholder="Expiration Date"></input></p>
+                                <p><input type="text" className='Cardholder name' placeholder="Cardholder name"></input></p>
+                                <p><input type="text" className='Card number' placeholder="Card number"></input></p>
+                                <p><input type="text" className='CVV' placeholder="CVV"></input></p>
+                                <p><input type="date" className='Expiration date' placeholderText="Expiration Date"></input></p>
                             </div>
                             <button className="submit" type='submit'>Submit</button>
                         </form>

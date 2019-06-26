@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import NavBar from './NavBar';
 import signUpTheater from  '../indy3.png';
+import axios from 'axios';
 
 const SignUp = (props) => {
 
@@ -30,14 +31,27 @@ const SignUp = (props) => {
         setPassword([event.target.value])
     }
 
+    const addNewUser = () => {
+        const newUser = {
+            "username": {Username},
+            "password": {Password},
+            "firstname": {FirstName},
+            "lastname": {LastName},
+            "email": {Email},
+            "birthday": {Birthday}
+        }
+        axios.post("http://localhost:3000/users", newUser)
+            .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+        })
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault()
-        props.submitFirstName(FirstName)
-        props.submitLastName(LastName)
-        props.submitEmail(Email)
-        props.submitBirthday(Birthday)
-        props.submitUsername(Username)
-        props.submitPassword(Password)
+        addNewUser();
     }
 
     return (
@@ -55,7 +69,7 @@ const SignUp = (props) => {
             </div>
             <div>
                 <label>Password: </label>
-                <input type="text" className='Password' value={Password} onChange={handlePasswordChange}></input>
+                <input type="password" className='Password' value={Password} onChange={handlePasswordChange}></input>
             </div>
             <div>
                 <label>Firstname: </label>

@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var express = require('express');
+var cors = require('cors');
 let app = express();
 var Int32 = require('mongoose-int32');
 
@@ -7,6 +8,15 @@ mongoose.connect('mongodb://localhost:27017/theater',{useNewUrlParser: true}, er
 	error ? console.log('Connection failed: ${error}') :
 	console.log('Successfully connected to MongoDB');
 });
+
+var router = express.Router();
+app.use(cors({
+	origin: "http://localhost:3001",
+	credentials: true
+}
+));
+app.use('/movie', router);
+app.use('/users', router);
 
 //movie
 var movieSchema = new mongoose.Schema( 
@@ -21,8 +31,7 @@ var movieSchema = new mongoose.Schema(
 );
 
 var Movie = mongoose.model('Movie', movieSchema);
-
-Movie.updateOne({"name":"Super Happy Movie", "rating":"PG13", "tickets":40}, (error, result) => {if (error) { console.log('Update failed: '+error);} else console.log('Movie updated');});
+module.exports = mongoose.model('Movie', movieSchema);
 
 var querySingleMovie = Movie.findOne({'rating': 'R'});
 var queryAllMovies = Movie.find();
@@ -49,15 +58,19 @@ querySingleMovie.exec(function (err,movie) {
 	}
 });
 
-app.get('/', (req, res) => {
-	res.send(allMovies);
-})
-
 app.get('/movie', (req, res) => {
-	res.send('Single Movie: ' + oneMovie.name);
+	var query = Movie.find({}).then(movies =>{
+			if(!movies) {res.json({message:'No movies'});
+			return;
+		} else {
+			console.log('got movies');
+			res.json({movies});
+			return;
+		}
+	});
 });
 
-//user
+//users
 var userSchema = new mongoose.Schema( 
     {
       username:		{ type: String, required: true },
@@ -71,6 +84,37 @@ var userSchema = new mongoose.Schema(
 );
 
 var User = mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema);
+
+app.get('/users', (req, res) => {
+	var query = User.find({}).then(users => {
+		if(!users){ 
+			res.json({message: 'No users'});
+			return;
+		} else { res.json({users}); return; }
+	});
+});
+
+app.get('/users/:username', (req, res) => {
+	var query = User.find({'username':req.params.username}).then(user => {
+		if(!user){ 
+			res.json('User not found'); 
+			return;
+		} else {
+			res.json({user}); 
+			return;
+		}
+	})
+})
+
+app.post('/users', (req, res) => {
+	User.create(req.body, (err, result) => {
+		if (err) 
+			return handleError(err);
+		else
+			console.log('successfully added new user')
+	})
+})
 
 var querySingleUser = User.findOne({'username': 'alice'});
 var queryAllUsers = User.find();
@@ -97,11 +141,8 @@ queryAllUsers.exec(function (err, users) {
 	}
 })
 
-var router = express.Router();
-app.use('/movies', router);
-app.use('/users', router);
 
-const server = app.listen(3001, () => {  
+const server = app.listen(3000, () => {  
     const SERVERHOST = server.address().address;      
     const SERVERPORT = server.address().port;  
     console.log('App listening at http://${SERVERHOST}:${SERVERPORT}');

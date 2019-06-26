@@ -23,7 +23,7 @@ const HomePage = () => {
             <div className="title">
                 <img class="logo" src={CinemaKey}></img>
                 <div className="signin">
-                    <SignIn signIn={signIn}/>
+                    <SignIn username={'alice'}/>
                     <div>
                         {loggedIn && ( <div><p>Welcome {username}</p></div>)}
                     </div>
