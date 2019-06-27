@@ -9,7 +9,7 @@ const Accessibility = () => {
         <h1>Accessibility Technologies</h1>
         <h4>
             Movies are best enjoyed by everyone<br />
-            At TkpbCSbtybETA@V+A, our theater offers the following assistive technologies for our movie-goers:
+            At TkpbCSbtybETA@V+A, our theater offers the following assisstive technologies for our movie-goers:
         </h4>
         <h2>Wheelchair</h2>
         <h2>Hearing:</h2>

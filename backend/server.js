@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var express = require('express');
 var cors = require('cors');
 let app = express();
+var bodyParser = require('body-parser')
 var Int32 = require('mongoose-int32');
 
 mongoose.connect('mongodb://localhost:27017/theater',{useNewUrlParser: true}, error => {
@@ -10,11 +11,12 @@ mongoose.connect('mongodb://localhost:27017/theater',{useNewUrlParser: true}, er
 });
 
 var router = express.Router();
+router.use(bodyParser.json());
 app.use(cors({
 	origin: "http://localhost:3001",
-	credentials: true
 }
 ));
+
 app.use('/movie', router);
 app.use('/users', router);
 
@@ -51,7 +53,7 @@ var oneMovie;
 querySingleMovie.select('name rating runtime tickets showtimes');
 querySingleMovie.exec(function (err,movie) {
 	if (err) 
-		return handleError(err);
+		console.log(err.message);
 	else {
 		console.log('%s %s %s.', movie.name, movie.rating, movie.runtime, movie.showtimes, movie.tickets);
 		oneMovie = movie;
@@ -79,7 +81,6 @@ var userSchema = new mongoose.Schema(
       lastname:     { type: String, required: true },
 	  email:  		{ type: String, required: true },
 	  birthday: 	{ type: String, required: true },
-	  elsEmployee:  { type: Boolean, required: true }
     }
 );
 
@@ -110,10 +111,10 @@ app.get('/users/:username', (req, res) => {
 	})
 })
 
-app.post('/users', (req, res) => {
+app.post('/users/addUser', (req, res) => {
 	User.create(req.body, (err, result) => {
 		if (err) 
-			return handleError(err);
+			console.log(err.message);
 		else
 			console.log('successfully added new user')
 	})
@@ -123,21 +124,21 @@ var querySingleUser = User.findOne({'username': 'alice'});
 var queryAllUsers = User.find();
 
 var oneUser;
-querySingleUser.select('username password firstname lastname email birthday elsEmployee')
+querySingleUser.select('username password firstname lastname email birthday')
 querySingleUser.exec(function (err, user) {
 	if(err){
-		return handleError(err);
+		console.log(err.message);
 	}
 	else{
 		oneUser = user;
-		console.log('%s %s', oneUser.username, oneUser.elsEmployee)
+		//console.log('%s %s', oneUser.username)
 	}
 })
 
 var allUsers;
 queryAllUsers.exec(function (err, users) {
 	if(err){
-		return handleError(err)
+		console.log(err.message)
 	} else{
 		allUsers = users;
 		console.log('%s %s', allUsers.length, allUsers[0].email)

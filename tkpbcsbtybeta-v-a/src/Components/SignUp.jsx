@@ -57,6 +57,7 @@ const SignUp = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        console.log("HERE")
         const newUser = {
             "username": Username[0],
             "password": Password[0],
@@ -65,6 +66,7 @@ const SignUp = (props) => {
             "email":    Email[0],
             "birthday": Birthday[0],
         }
+        console.log(newUser.username)
         axios.post("http://localhost:3000/users/addUser", newUser)
             .then(function (response) {
             console.log('res: ' + response);
@@ -116,7 +118,7 @@ const SignUp = (props) => {
                 </div>
             </div>
             <div>
-            <Popup trigger={<button type='submit' class="button"> Sign Up! </button> } modal>
+            <Popup onOpen={handleSubmit} trigger={<button type='submit' class="button"> Sign Up! </button> } modal>
                 {close => (
                         <div class="modal">
                             <div>
