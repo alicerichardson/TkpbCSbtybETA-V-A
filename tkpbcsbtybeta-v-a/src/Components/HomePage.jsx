@@ -29,10 +29,7 @@ const HomePage = () => {
             <div className="title">
                 <img class="logo" src={CinemaKey}></img>
                 <div className="signin">
-                    <SignIn username={'alice'}/>
-                    <div>
-                        {loggedIn && (<div><p>Welcome {username}</p></div>)}
-                    </div>
+                    <SignIn />
                 </div>
                 <div class="navbar">
                     <header><NavBar /></header>

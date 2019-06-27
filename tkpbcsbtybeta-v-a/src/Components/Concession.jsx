@@ -11,7 +11,6 @@ const Concession = () => {
         <div>
             <NavBar/> 
             <h1>Concession Stand</h1>
-            <img class="concessionStand" src={concessionStand} alt="Theater Concession Stand"></img>
             <table align="center">
                 <tr>
                     <th>Item</th>

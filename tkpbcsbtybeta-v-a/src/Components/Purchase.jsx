@@ -19,7 +19,6 @@ const Purchase = (props) => {
     }
 
     const calculateTotal = () => {
-        console.log('herere')
         if(email[0].includes("@elsevier.com")){
             setPriceTotal(( (childTickets*4) + (adultTickets*8) ));
         }
@@ -88,9 +87,8 @@ const Purchase = (props) => {
                             <button class="ticketBtn" onClick={decrementChildTickets}>-</button>
                             <button class="ticketBtn" onClick={incrementChildTickets}>+</button>
                         <p></p>
-                        <p>Adult Tickets: $10
-                            Child Tickets: $8
-                        </p>
+                        <p>Adult Tickets: $10</p>
+                        <p>Child Tickets: $8</p>
                         </div>
                     </form>
                 </div>
@@ -98,13 +96,13 @@ const Purchase = (props) => {
                     <form>
                         <div className="email">
                             <p>Enter Email</p>
-                            <p><input type="text" name='Email' placeholder="Email" value={email} onChange={handleEmailChange}></input></p>
+                            <p><input type="email" name='Email' placeholder="Email" value={email} onChange={handleEmailChange}></input></p>
                         </div>
                         <div className="cardInfo">
                             <p>Enter Card Information</p>
                             <p><input type="text" name='Cardholder name' placeholder="Cardholder name" onChange={handleCardChange}></input></p>
-                            <p><input type="text" name='Card number' placeholder="Card number"></input></p>
-                            <p><input type="text" name='CVV' placeholder="CVV"></input></p>
+                            <p><input type="text" class="cc-number" maxLength="16" name='Card number' placeholder="Card number"></input></p>
+                            <p><input type="text" maxLength="3" name='CVC' placeholder="CVV"></input></p>
                             <p><input type="text" name='Expiration date' placeholder="Expiration (MM/YY)"></input></p>
                         </div>
                     </form>
