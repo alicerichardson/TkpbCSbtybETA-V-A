@@ -8,7 +8,7 @@ import Purchase from './Components/Purchase';
 import SignIn from './Components/SignIn';
 import TicketConfirmation from './Components/TicketConfirmation';
 import Concession from './Components/Concession';
-import Accessability from './Components/Accessability';
+import Accessibility from './Components/Accessibility';
 
 function App() {
   const routing = (
