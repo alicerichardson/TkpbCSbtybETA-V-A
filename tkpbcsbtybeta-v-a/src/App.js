@@ -8,7 +8,7 @@ import Purchase from './Components/Purchase';
 import SignIn from './Components/SignIn';
 import TicketConfirmation from './Components/TicketConfirmation';
 import Concession from './Components/Concession';
-import Accessability from './Components/Accessability';
+import Accessibility from './Components/Accessibility';
 
 function App() {
   const routing = (
@@ -17,7 +17,7 @@ function App() {
         <Route path="/" component={HomePage} exact/>
         <Route path="/signup" component={SignUp}/>
         <Route path="/concessions" component={Concession}/>
-        <Route path="/accessability" component={Accessability}/>
+        <Route path="/accessbility" component={Accessibility}/>
         <Route path="/contact" component={Info}/>
         <Route path="/purchase" component={Purchase}/>
         <Route path="/signin" component={SignIn}/>
