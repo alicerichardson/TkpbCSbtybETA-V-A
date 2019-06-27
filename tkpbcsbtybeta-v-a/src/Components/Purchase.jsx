@@ -21,10 +21,10 @@ const Purchase = (props) => {
     const calculateTotal = () => {
         console.log('herere')
         if(email[0].includes("@elsevier.com")){
-            setPriceTotal(((childTickets*4) + (adultTickets*8)));
+            setPriceTotal(( (childTickets*4) + (adultTickets*8) ));
         }
         else{
-            setPriceTotal(((childTickets*6) + (adultTickets*10)));
+            setPriceTotal(( (childTickets*6) + (adultTickets*10) ));
         }
     }
 
@@ -120,6 +120,9 @@ const Purchase = (props) => {
                         </div>            
                     )}
                     </Popup>
+                </div>
+                <div>
+                    <p className="footnote">Elsevier employees get a 20% discount! Please give your Elsevier email.</p>
                 </div>
             </div>
         </div>

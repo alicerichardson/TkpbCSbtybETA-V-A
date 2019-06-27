@@ -31,8 +31,6 @@ const SignUp = (props) => {
         setBirthday([event.target.value])
     }
 
-
-
     const handleUsernameChange = (event) => {
         setUsername([event.target.value])
         console.log('hererere')

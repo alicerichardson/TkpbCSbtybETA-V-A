@@ -27,33 +27,37 @@ const SignIn = (props) => {
         setPassword([event.target.value])
     }
 
-<<<<<<< HEAD
+    const handleLogin = (event) =>{
+        event.preventDefault();
+        setLoggedIn(true)
+    }
+
     function signIn (username) {
-        user = users.filter(user => user.username === username);
+        let user = users.filter(user => user.username === username);
         console.log(user.username);
         console.log(user.password);
             if(user.password === password){
                 console.log("true");
-                setLoggedIn(true);
                 return;
             }
         
         console.log("false");
     }
 
-=======
->>>>>>> 51621e9ff0f85582006bb29a813006a134f56e03
     return(
         <div>
-        <Popup trigger={<button>Sign In</button>} position="left top">
+        {loggedIn && (<div className="loggedIn">Welcome {username}!<button>Sign Out</button></div>) }
+        {!loggedIn && (<Popup trigger={<button>Sign In</button>} position="left top">
             <div className="signinFields">
                 <form onSubmit="return signIn()" class="form">
-                    <input type="text" id="username" placeholder="Username"/>
-                    <input type="password" className="password" placeholder="Password"/>
-                    <input type="submit" value="Sign In"/>               
+                    <input type="text" id="username" placeholder="Username" onChange={handleUsernameChange}/>
+                    <input type="password" className="password" placeholder="Password" onChange={handlePasswordChange}/>
+                    <button onClick={handleLogin}>Sign In!</button>           
                 </form>
             </div>
-        </Popup>
+        </Popup>)}
+        
+
         </div>
     )
 

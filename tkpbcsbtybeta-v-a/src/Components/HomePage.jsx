@@ -40,13 +40,14 @@ const HomePage = () => {
                     <header><NavBar /></header>
                 </div>
                 <h1><Random className="mainTitle" text='TkpbCSbtybETA@V+A' /></h1>
-                <h3>(TheaterKey powered by Clinical Solutions brought to you by Elsevier Tech Associates @ Via + Aries)</h3> 
+                <h3>(TheaterKey powered by Cinema Solutions brought to you by Elsevier Tech Associates @ Via + Aries)</h3> 
             </div>
             <div className="selectdate">
-                <h4>Movies Plaing On:</h4>
-                <CustomInput />
+                <h4>Movies Playing On:</h4>
+                <p><CustomInput /></p>
                 {/* Movies Playing On: <DatePicker>selected={startDate} onChange={handleChange}</DatePicker> */}
             </div>
+            <br/>
             <div className="schedule">
                 <Schedule />
             </div> 

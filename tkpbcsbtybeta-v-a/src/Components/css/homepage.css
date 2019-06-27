@@ -110,3 +110,11 @@ table, th, td {
     text-align: left;
     margin-left: 10%;
 }
+
+.selectdate {
+    margin-bottom: 5%;
+}
+
+.loggedIn{
+    position: top left;
+}
