@@ -3,7 +3,8 @@
     font-weight: lighter;  
 }
 
-.signin button {
+.signin button,
+.selectdate button {
     float: right;
     background-color: white;  
     border: 4px solid rgb(212, 195, 228);
@@ -13,24 +14,10 @@
     cursor: pointer;
 }
 
-.signin button:hover {
+.signin button:hover,
+.selectdate button:hover {
     background-color: rgb(112, 58, 112);
     color: white;
-}
-
-.selectdate button{
-    border: 4px solid rgb(212, 195, 228);
-    border-radius: 100px;
-    padding: 10px 24px;
-    color: black;
-    cursor: pointer;
-    background-color: rgb(112, 58, 112);
-    color: white;
-}
-
-.selectdate button:hover{
-    background-color: white;
-    color: black;
 }
 
 .navbar {
@@ -85,25 +72,6 @@ header{
 .column{
     float: left;
     width: 33.33%;
-}
-
-table, th, td {
-    vertical-align: middle;
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 5px;
-}
-
-.concessionStand {
-    width: 50%;
-    height: auto;
-    padding: 20px;
-}
-
-.concession{
-    width: 150px;
-    height: 150px;
-    padding: 5px;
 }
 
 .selectdate h4 {

@@ -4,6 +4,7 @@ import popcorn from '../popcorn.PNG';
 import soda from '../soda.png';
 import candy from '../candy.jpg';
 import concessionStand from '../ConcessionStand.jpg';
+import './css/concession.css';
 
 const Concession = () => { 
     return (
