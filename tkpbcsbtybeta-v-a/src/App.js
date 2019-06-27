@@ -17,7 +17,7 @@ function App() {
         <Route path="/" component={HomePage} exact/>
         <Route path="/signup" component={SignUp}/>
         <Route path="/concessions" component={Concession}/>
-        <Route path="/accessbility" component={Accessability}/>
+        <Route path="/accessibility" component={Accessibility}/>
         <Route path="/contact" component={Info}/>
         <Route path="/purchase" component={Purchase}/>
         <Route path="/signin" component={SignIn}/>
